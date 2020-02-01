@@ -1,0 +1,638 @@
+| 1 || {{flaga|CHN}} [[Chińska Republika Ludowa]]
+| align="right"| 1&nbsp;314&nbsp;480&nbsp;000 ||align="right"| 1&nbsp;321&nbsp;290&nbsp;000 ||align="right"| 1&nbsp;328&nbsp;020&nbsp;000 ||align="right"| 1&nbsp;338&nbsp;612&nbsp;968 ||align="right"| 1&nbsp;336&nbsp;718&nbsp;015 ||align="right"| 1&nbsp;343&nbsp;239&nbsp;923 ||align="right"| 1 373 541 278 ||align="right"| 1 379 302 771
+|-
+| 2 || {{flaga|Indie}} [[Indie]]
+| align="right"| 1&nbsp;095&nbsp;351&nbsp;995 ||align="right"| 1&nbsp;129&nbsp;866&nbsp;154 ||align="right"| 1&nbsp;147&nbsp;995&nbsp;898 ||align="right"| 1&nbsp;166&nbsp;079&nbsp;217 ||align="right"| 1&nbsp;189&nbsp;172&nbsp;906 ||align="right"| 1&nbsp;205&nbsp;073&nbsp;612 ||align="right"| 1 266 883 598 ||align="right"| 1 281 935 911
+|-
+| 3 || {{flaga|USA}} [[Stany Zjednoczone]]
+| align="right"| 298 444 215 ||align="right"| 301 139 947 ||align="right"| 305 548 000 ||align="right"| 307 212 123 ||align="right"| 313 232 044 ||align="right"| 313 847 465 ||align="right"| 323 995 528 ||align="right"| 326 625 791
+|-
+| 4 || {{flaga|Indonezja}} [[Indonezja]]
+| align="right"| 245 452 739 ||align="right"| 234 693 997 ||align="right"| 237 512 355 ||align="right"| 240 271 522 ||align="right"| 245 613 043 ||align="right"| 248 216 193 ||align="right"| 258 316 051 ||align="right"| 260 580 739
+|-
+| 5 || {{flaga|BRA}} [[Brazylia]]
+| align="right"| 188 078 227 ||align="right"| 190 010 647 ||align="right"| 191 908 598 ||align="right"| 198 739 269 ||align="right"| 203 429 773 ||align="right"| 205 716 890 ||align="right"| 205 823 665 ||align="right"| 207 353 391
+|-
+| 6 || {{flaga|Pakistan}} [[Pakistan]]
+| align="right"| 165 803 560 ||align="right"| 164 741 924 ||align="right"| 167 762 040 ||align="right"| 176 242 949 ||align="right"| 187 342 721 ||align="right"| 190 291 129 ||align="right"| 201 995 540 ||align="right"| 204 924 861
+|-
+| 7 || {{flaga|NGA}} [[Nigeria]]
+| align="right"| 131 859 731 ||align="right"| 135 031 164 ||align="right"| 138 283 240 ||align="right"| 149 229 090 ||align="right"| 155 215 573 ||align="right"| 170 123 740 ||align="right"| 186 053 386 ||align="right"| 190 632 261
+|-
+| 8 || {{flaga|Bangladesz}} [[Bangladesz]]
+| align="right"| 147 365 352 ||align="right"| 150 448 339 ||align="right"| 153 546 901 ||align="right"| 156 050 883 ||align="right"| 158 570 535 ||align="right"| 161 083 804 ||align="right"| 156 186 882 ||align="right"| 157 826 578
+|-
+| 9 || {{flaga|RUS}} [[Rosja]]
+| align="right"| 142 893 540 ||align="right"| 141 377 752 ||align="right"| 140 702 094 ||align="right"| 140 041 247 ||align="right"| 138 739 892 ||align="right"| 138 082 178 ||align="right"| 142 355 415 ||align="right"| 142 257 519
+|-
+| 10 || {{flaga|JPN}} [[Japonia]]
+| align="right"| 127 463 611 ||align="right"| 127 433 494 ||align="right"| 127 288 419 ||align="right"| 127 078 679 ||align="right"| 126 475 664 ||align="right"| 127 368 088 ||align="right"| 126 702 133 ||align="right"| 126 451 398
+|-
+| 11 || {{flaga|MEX}} [[Meksyk]]
+| align="right"| 107 449 525 ||align="right"| 108 700 891 ||align="right"| 109 955 400 ||align="right"| 111 211 789 ||align="right"| 113 724 226 ||align="right"| 114 975 406 ||align="right"| 123 166 749 ||align="right"| 124 574 795
+|-
+| 12 || {{flaga|Etiopia}} [[Etiopia]]
+| align="right"| 74 777 981 ||align="right"| 76 511 887 ||align="right"| 78 254 090 ||align="right"| 85 237 338 ||align="right"| 90 873 739 ||align="right"| 93 815 992 ||align="right"| 102 374 044 ||align="right"| 105 350 020
+|-
+| 13 || {{flaga|Filipiny}} [[Filipiny]]
+| align="right"| 89 468 677 ||align="right"| 91 077 287 ||align="right"| 92 681 453 ||align="right"| 97 976 603 ||align="right"| 101 833 938 ||align="right"| 103 775 002 ||align="right"| 102 624 209 ||align="right"| 104 256 076
+|-
+| 14 || {{flaga|EGY}} [[Egipt]]
+| align="right"| 78 887 007 ||align="right"| 80 335 036 ||align="right"| 81 713 517 ||align="right"| 83 082 869 ||align="right"| 82 079 636 ||align="right"| 83 688 164 ||align="right"| 94 666 993 ||align="right"| 97 041 072
+|-
+| 15 || {{flaga|VNM}} [[Wietnam]]
+| align="right"| 84 402 966 ||align="right"| 85 262 356 ||align="right"| 86 116 559 ||align="right"| 86 967 524 ||align="right"| 90 549 390 ||align="right"| 91 519 289 ||align="right"| 95 261 021 ||align="right"| 96 160 163
+|-
+|16 || {{flaga|COD}} [[Demokratyczna Republika Konga]]
+| align="right"| 62 660 551 ||align="right"| 65 751 512 ||align="right"| 66 514 506 ||align="right"| 68 692 542 ||align="right"| 71 712 867 ||align="right"| 73 599 190 ||align="right"| 81 331 050 ||align="right"| 83 301 151
+|-
+|17 || {{flaga|Iran}} [[Iran]]
+| align="right"| 68 688 433 ||align="right"| 65 397 521 ||align="right"| 65 875 223 ||align="right"| 66 429 284 ||align="right"| 77 891 220 ||align="right"| 78 868 711 ||align="right"| 82 801 633 ||align="right"| 82 021 564
+|-
+|18 || {{flaga|TUR}} [[Turcja]]
+| align="right"| 70 413 958 ||align="right"| 71 158 647 ||align="right"| 71 892 807 ||align="right"| 76 805 524 ||align="right"| 78 785 548 ||align="right"| 79 749 461 ||align="right"| 80 274 604 ||align="right"| 80 845 215
+|-
+|19 || {{flaga|DEU}} [[Niemcy]]
+| align="right"| 82 422 299 ||align="right"| 82 400 996 ||align="right"| 82 369 548 ||align="right"| 82 329 758 ||align="right"| 81 471 834 ||align="right"| 81 305 856 ||align="right"| 80 772 792 ||align="right"| 80 594 017
+|-
+| 20 || {{flaga|Tajlandia}} [[Tajlandia]]
+| align="right"| 64 631 595 ||align="right"| 65 068 149 ||align="right"| 65 493 298 ||align="right"| 65 905 410 ||align="right"| 66 720 153 ||align="right"| 67 091 089 ||align="right"| 68 200 824 ||align="right"| 68 414 135
+|-
+| 21 || {{flaga|FRA}} [[Francja]]
+| align="right"| 62 752 136 ||align="right"| 63 713 926 ||align="right"| 64 057 790 ||align="right"| 64 057 792 ||align="right"| 65 312 249 ||align="right"| 65 630 692 ||align="right"| 66 836 154 ||align="right"| 67 106 161
+|-
+| 22 || {{flaga|GBR}} [[Wielka Brytania]]
+| align="right"| 60 609 153 ||align="right"| 60 776 238 ||align="right"| 60 943 912 ||align="right"| 61 113 205 ||align="right"| 62 698 362 ||align="right"| 63 047 162 ||align="right"| 64 430 428 ||align="right"| 64 769 452
+|-
+| 23 || {{flaga|ITA}} [[Włochy]]
+| align="right"| 58 133 509 ||align="right"| 58 147 733 ||align="right"| 58 145 321 ||align="right"| 58 126 212 ||align="right"| 61 016 804 ||align="right"| 61 261 254 ||align="right"| 62 007 540 ||align="right"| 62 137 802
+|-
+| 24 || {{flaga|MMR}} [[Mjanma]]
+| align="right"| 47 382 633 ||align="right"| 47 373 958 ||align="right"| 47 758 181 ||align="right"| 48 137 741 ||align="right"| 53 999 804 ||align="right"| 54 584 650 ||align="right"| 56 890 418 ||align="right"| 55 123 814
+|-
+|25 || {{Państwo|ZAF}}
+| align="right"| 44 187 637 ||align="right"| 43 997 828 ||align="right"| 43 786 115 ||align="right"| 49 052 489 ||align="right"| 49 004 031 ||align="right"| 48 810 427 ||align="right"| 54 300 704 ||align="right"| 54 841 552
+|-
+|26 || {{flaga|Tanzania}} [[Tanzania]]
+| align="right"| 37 445 392 ||align="right"| 39 384 223 ||align="right"| 40 213 162 ||align="right"| 41 048 532 ||align="right"| 42 746 620 ||align="right"| 43 601 796 ||align="right"| 52 482 726 ||align="right"| 53 950 935
+|-
+|27 || {{flaga|KOR}} [[Korea Południowa]]
+| align="right"| 48 846 823 ||align="right"| 49 044 790 ||align="right"| 49 232 844 ||align="right"| 48 508 972 ||align="right"| 48 754 657 ||align="right"| 48 860 500 ||align="right"| 50 924 172 ||align="right"| 51 181 299
+|-
+|28 || {{flaga|ESP}} [[Hiszpania]]
+| align="right"| 40 397 842 ||align="right"| 40 448 191 ||align="right"| 40 491 051 ||align="right"| 40 525 002 ||align="right"| 46 754 784 ||align="right"| 47 042 984 ||align="right"| 48 563 476 ||align="right"| 48 958 159
+|-
+|29 || {{flaga|COL}} [[Kolumbia]]
+| align="right"| 43 593 035 ||align="right"| 44 379 598 ||align="right"| 45 013 674 ||align="right"| 45 644 023 ||align="right"| 44 725 543 ||align="right"| 45 239 079 ||align="right"| 47 220 856 ||align="right"| 47 698 524
+|-
+|30 || {{flaga|Kenia}} [[Kenia]]
+| align="right"| 34 707 817 ||align="right"| 36 913 721 ||align="right"| 37 953 838 ||align="right"| 39 002 772 ||align="right"| 41 070 934 ||align="right"| 43 013 341 ||align="right"| 46 790 758 ||align="right"| 47 615 739
+|-
+| 31 || {{flaga|ARG}} [[Argentyna]]
+| align="right"| 39 921 833 ||align="right"| 40 301 927 ||align="right"| 40 677 348 ||align="right"| 40 913 584 ||align="right"| 41 769 726 ||align="right"| 42 192 494 ||align="right"| 43 886 748 ||align="right"| 44 293 293
+|-
+|32 || {{flaga|UKR}} [[Ukraina]]
+| align="right"| 46 710 816 ||align="right"| 46 299 862 ||align="right"| 45 994 287 ||align="right"| 45 700 395 ||align="right"| 45 134 707 ||align="right"| 44 854 065 ||align="right"| 42 504 274 ||align="right"| 44 033 874
+|-
+|33 || {{flaga|DZA}} [[Algieria]]
+| align="right"| 32 930 091 ||align="right"| 33 333 216 ||align="right"| 33 769 669 ||align="right"| 34 178 188 ||align="right"| 34 994 937 ||align="right"| 35 406 303 ||align="right"| 40 263 711 ||align="right"| 40 969 443
+|-
+|34 || {{flaga|Uganda}} [[Uganda]]
+| align="right"| 28 195 754 ||align="right"| 30 262 610 ||align="right"| 31 367 972 ||align="right"| 32 369 558 ||align="right"| 34 612 250 ||align="right"| 35 873 253 ||align="right"| 38 319 241 ||align="right"| 39 570 125
+|-
+|35 || {{flaga|Irak}} [[Irak]]
+| align="right"| 26 783 383 ||align="right"| 27 499 638 ||align="right"| 28 221 181 ||align="right"| 28 945 657 ||align="right"| 30 399 572 ||align="right"| 31 129 225 ||align="right"| 38 146 025 ||align="right"| 39 192 111
+|-
+|36 || {{flaga|POL}} [[Polska]]
+| align="right"| 38 536 869 ||align="right"| 38 518 241 ||align="right"| 38 500 696 ||align="right"| 38 482 919 ||align="right"| 38 441 588 ||align="right"| 38 533 299 ||align="right"| 38 523 261 ||align="right"| 38 476 269
+|-
+|37 || {{flaga|Sudan}} [[Sudan]]
+| align="right"| 41 236 378 ||align="right"| 39 379 358 ||align="right"| 40 218 455 ||align="right"| 41 087 825 ||align="right"| 45 047 502 ||align="right"| 34 206 710 ||align="right"| 36 729 501 ||align="right"| 37 345 935
+|-
+|38 || {{flaga|CAN}} [[Kanada]]
+| align="right"| 33 098 932 ||align="right"| 33 390 141 ||align="right"| 33 212 696 ||align="right"| 33 487 208 ||align="right"| 34 030 589 ||align="right"| 34 300 083 ||align="right"| 35 362 905 ||align="right"| 35 623 680
+|-
+| 39 || {{flaga|AFG}} [[Afganistan]]
+| align="right"| 31 056 997 ||align="right"| 31 889 923 ||align="right"| 32 738 376 ||align="right"| 33 609 937 ||align="right"| 29 835 392 ||align="right"| 30 419 928 ||align="right"| 33 332 025 ||align="right"| 34 124 811
+|-
+|40 || {{flaga|MAR}} [[Maroko]]
+| align="right"| 33 241 259 ||align="right"| 33 757 175 ||align="right"| 34 343 219 ||align="right"| 34 859 364 ||align="right"| 31 968 361 ||align="right"| 32 309 239 ||align="right"| 33 655 786 ||align="right"| 33 986 655
+|-
+|41 || {{flaga|Malezja}} [[Malezja]]
+| align="right"| 24 385 858 ||align="right"| 24 821 286 ||align="right"| 25 274 133 ||align="right"| 25 715 819 ||align="right"| 28 728 607 ||align="right"| 29 179 952 ||align="right"| 30 949 962 ||align="right"| 31 381 992
+|-
+|42 || {{flaga|VEN}} [[Wenezuela]]
+| align="right"| 25 730 435 ||align="right"| 26 023 528 ||align="right"| 26 414 815 ||align="right"| 26 814 843 ||align="right"| 27 635 743 ||align="right"| 28 047 938 ||align="right"| 30 912 302 ||align="right"| 31 304 016
+|-
+|43 || {{flaga|PER}} [[Peru]]
+| align="right"| 28 302 603 ||align="right"| 28 674 757 ||align="right"| 29 180 899 ||align="right"| 29 546 963 ||align="right"| 29 248 943 ||align="right"| 29 549 517 ||align="right"| 30 741 062 ||align="right"| 31 036 656
+|-
+|44 || {{flaga|Uzbekistan}} [[Uzbekistan]]
+| align="right"| 27 307 134 ||align="right"| 27 780 059 ||align="right"| 28 268 440 ||align="right"| 27 606 007 ||align="right"| 28 128 600 ||align="right"| 28 394 180 ||align="right"| 29 473 614 ||align="right"| 29 748 859
+|-
+|45 || {{flaga|Nepal}} [[Nepal]]
+| align="right"| 28 287 147 ||align="right"| 28 901 790 ||align="right"| 29 519 114 ||align="right"| 28 563 377 ||align="right"| 29 391 883 ||align="right"| 29 890 686 ||align="right"| 29 033 914 ||align="right"| 29 384 297
+|-
+|46 || {{flaga|AGO}} [[Angola]]
+| align="right"| 12 127 071 ||align="right"| 12 263 596 ||align="right"| 12 531 357 ||align="right"| 12 799 293 ||align="right"| 13 338 541 ||align="right"| 18 056 072 ||align="right"| 20 172 332 ||align="right"| 29 310 273
+|-
+|47 || {{flaga|SAU}} [[Arabia Saudyjska]]
+| align="right"| 27 019 731 ||align="right"| 27 601 038 ||align="right"| 28 161 417 ||align="right"| 28 686 633 ||align="right"| 26 131 703 ||align="right"| 26 534 504 ||align="right"| 28 160 273 ||align="right"| 28 571 770
+|-
+|48 || {{flaga|Jemen}} [[Jemen]]
+| align="right"| 21 456 188 ||align="right"| 22 230 531 ||align="right"| 23 013 376 ||align="right"| 23 822 783 ||align="right"| 24 133 492 ||align="right"| 24 771 809 ||align="right"| 27 392 779 ||align="right"| 28 036 829
+|-
+|49 || {{flaga|GHA}} [[Ghana]]
+| align="right"| 22 409 572 ||align="right"| 22 931 299 ||align="right"| 23 382 848 ||align="right"| 23 832 495 ||align="right"| 24 791 073 ||align="right"| 25 241 998 ||align="right"| 26 908 262 ||align="right"| 27 499 924
+|-
+|50 || {{flaga|MOZ}} [[Mozambik]]
+| align="right"| 19 686 505 ||align="right"| 20 905 585 ||align="right"| 21 284 701 ||align="right"| 21 669 278 ||align="right"| 22 948 858 ||align="right"| 23 515 934 ||align="right"| 25 930 150 ||align="right"| 26 573 706
+|-
+|51 || {{flaga|Korea Północna}} [[Korea Północna]]
+| align="right"| 23 113 019 ||align="right"| 23 301 725 ||align="right"| 23 479 089 ||align="right"| 22 665 345 ||align="right"| 24 457 492 ||align="right"| 24 589 122 ||align="right"| 25 115 311 ||align="right"| 25 248 140
+|-
+|52 || {{flaga|Madagaskar}} [[Madagaskar]]
+| align="right"| 18 595 469 ||align="right"| 19 448 815 ||align="right"| 20 042 551 ||align="right"| 20 653 556 ||align="right"| 21 926 221 ||align="right"| 22 585 517 ||align="right"| 24 430 325 ||align="right"| 25 054 161
+|-
+|53 || {{flaga|CMR}} [[Kamerun]]
+| align="right"| 17 340 702 ||align="right"| 18 060 382 ||align="right"| 18 467 692 ||align="right"| 18 879 301 ||align="right"| 19 711 291 ||align="right"| 20 129 878 ||align="right"| 24 360 803 ||align="right"| 24 994 885
+|-
+|54 || {{flaga|CIV}} [[Wybrzeże Kości Słoniowej]]
+| align="right"| 17 654 843 ||align="right"| 18 013 409 ||align="right"| 18 373 060 ||align="right"| 20 617 068 ||align="right"| 21 504 162 ||align="right"| 21 952 093 ||align="right"| 23 740 424 ||align="right"| 24 184 810
+|-
+|55 || {{flaga|TWN}} [[Republika Chińska]]
+| align="right"| 23 036 087 ||align="right"| 22 858 872 ||align="right"| 22 920 946 ||align="right"| 22 974 347 ||align="right"| 23 071 779 ||align="right"| 23 113 901 ||align="right"| 23 464 787 ||align="right"| 23 508 428
+|-
+|56 || {{flaga|AUS}} [[Australia]]
+| align="right"| 20 264 082 ||align="right"| 20 434 176 ||align="right"| 20 600 856 ||align="right"| 21 262 641 ||align="right"| 21 766 711 ||align="right"| 22 015 576 ||align="right"| 22 992 654 ||align="right"| 23 232 413
+|-
+|57 || {{flaga|Sri Lanka}} [[Sri Lanka]]
+| align="right"| 20 222 240 ||align="right"| 20 926 315 ||align="right"| 21 128 773 ||align="right"| 21 324 791 ||align="right"| 21 283 913 ||align="right"| 21 481 334 ||align="right"| 22 235 000 ||align="right"| 22 409 381
+|-
+|58 || {{flaga|ROU}} [[Rumunia]]
+| align="right"| 22 303 552 ||align="right"| 22 276 056 ||align="right"| 22 246 862 ||align="right"| 22 215 421 ||align="right"| 21 904 551 ||align="right"| 21 848 504 ||align="right"| 21 599 736 ||align="right"| 21 529 967
+|-
+|59 || {{flaga|BFA}} [[Burkina Faso]]
+| align="right"| 13 902 972 ||align="right"| 14 326 203 ||align="right"| 15 264 735 ||align="right"| 15 746 232 ||align="right"| 16 751 455 ||align="right"| 17 275 115 ||align="right"| 19 512 533 ||align="right"| 20 107 509
+|-
+|60 || {{flaga|Niger}} [[Niger]]
+| align="right"| 12 525 094 ||align="right"| 12 894 865 ||align="right"| 13 272 679 ||align="right"| 15 306 252 ||align="right"| 16 468 886 ||align="right"| 17 078 839 ||align="right"| 18 638 600 ||align="right"| 19 245 344
+|-
+|61 || {{flaga|Malawi}} [[Malawi]]
+| align="right"| 13 013 926 ||align="right"| 13 603 181 ||align="right"| 13 931 831 ||align="right"| 14 268 711 ||align="right"| 15 879 252 ||align="right"| 16 323 044 ||align="right"| 18 570 321 ||align="right"| 19 196 246
+|-
+|62 || {{flaga|KAZ}} [[Kazachstan]]
+| align="right"| 15 233 244 ||align="right"| 15 284 929 ||align="right"| 15 340 533 ||align="right"| 15 399 437 ||align="right"| 15 522 373 ||align="right"| 17 522 010 ||align="right"| 18 360 353 ||align="right"| 18 556 698
+|-
+|63 || {{flaga|Syria}} [[Syria]]
+| align="right"| 18 881 361 ||align="right"| 19 314 747 ||align="right"| 19 747 586 ||align="right"| 20 178 485 ||align="right"| 22 517 750 ||align="right"| 22 530 746 ||align="right"| 17 185 170 ||align="right"| 18 028 549
+|-
+|64 || {{flaga|Mali}} [[Mali]]
+| align="right"| 11 716 829 ||align="right"| 11 995 402 ||align="right"| 12 324 029 ||align="right"| 12 666 987 ||align="right"| 14 159 904 ||align="right"| 14 533 511 ||align="right"| 17 467 108 ||align="right"| 17 885 245
+|-
+|65 || {{flaga|CHL}} [[Chile]]
+| align="right"| 16 134 219 ||align="right"| 16 284 741 ||align="right"| 16 454 143 ||align="right"| 16 601 707 ||align="right"| 16 888 760 ||align="right"| 17 067 369 ||align="right"| 17 650 114 ||align="right"| 17 789 267
+|-
+|66 || {{flaga|NLD}} [[Holandia]]
+| align="right"| 16 491 461 ||align="right"| 16 570 613 ||align="right"| 16 645 313 ||align="right"| 16 715 999 ||align="right"| 16 847 007 ||align="right"| 16 730 632 ||align="right"| 17 016 967 ||align="right"| 17 084 719
+|-
+|67 || {{flaga|Ekwador}} [[Ekwador]]
+| align="right"| 13 547 510 ||align="right"| 13 755 680 ||align="right"| 13 927 650 ||align="right"| 14 573 101 ||align="right"| 15 007 343 ||align="right"| 15 223 680 ||align="right"| 16 080 778 ||align="right"| 16 290 913
+|-
+|68 || {{flaga|Kambodża}} [[Kambodża]]
+| align="right"| 13 881 427 ||align="right"| 13 995 904 ||align="right"| 14 241 640 ||align="right"| 14 494 293 ||align="right"| 14 701 717 ||align="right"| 14 952 665 ||align="right"| 15 957 223 ||align="right"| 16 204 486
+|-
+| 69 || {{flaga|Zambia}} [[Zambia]]
+| align="right"| 11 502 010 ||align="right"| 11 477 447 ||align="right"| 11 669 534 ||align="right"| 11 862 740 ||align="right"| 13 881 336 ||align="right"| 14 309 446 ||align="right"| 15 510 711 ||align="right"| 15 972 000
+|-
+| 70 || {{flaga|Gwatemala}} [[Gwatemala]]
+| align="right"| 12 293 545 ||align="right"| 12 728 111 ||align="right"| 13 002 206 ||align="right"| 13 276 517 ||align="right"| 13 824 463 ||align="right"| 14 099 032 ||align="right"| 15 189 958 ||align="right"| 15 460 732
+|-
+|71 || {{flaga|Senegal}} [[Senegal]]
+| align="right"| 11 987 121 ||align="right"| 12 521 851 ||align="right"| 12 853 259 ||align="right"| 13 711 597 ||align="right"| 12 643 799 ||align="right"| 12 969 606 ||align="right"| 14 320 055 ||align="right"| 14 668 522
+|-
+|72 || {{flaga|Zimbabwe}} [[Zimbabwe]]
+| align="right"| 12 236 805 ||align="right"| 12 311 143 ||align="right"| 12 382 920 ||align="right"| 11 392 629 ||align="right"| 12 084 304 ||align="right"| 12 619 600 ||align="right"| 14 546 961 ||align="right"| 13 805 084
+|-
+|73 || {{flaga|Sudan Południowy}} [[Sudan Południowy]]
+| align="right"| 9 130 730 ||align="right"| 9 354 914 ||align="right"| 9 593 468 ||align="right"| 9 870 957 ||align="right"| 10 245 127 ||align="right"| 10 625 176 ||align="right"| 12 530 717 ||align="right"| 13 026 129
+|-
+|74 || {{flaga|Gwinea}} [[Gwinea]]
+| align="right"| 9 690 222 ||align="right"| 9 947 814 ||align="right"| 10 211 437 ||align="right"| 10 057 975 ||align="right"| 10 601 009 ||align="right"| 10 884 958 ||align="right"| 12 093 349 ||align="right"| 12 413 867
+|-
+|75 || {{flaga|Czad}} [[Czad]]
+| align="right"| 9 944 201 ||align="right"| 9 885 661 ||align="right"| 10 111 337 ||align="right"| 10 329 208 ||align="right"| 10 758 945 ||align="right"| 10 975 648 ||align="right"| 11 852 462 ||align="right"| 12 075 985
+|-
+|76 || {{flaga|Rwanda}} [[Rwanda]]
+| align="right"| 8 648 248 ||align="right"| 9 907 509 ||align="right"| 10 186 063 ||align="right"| 10 473 282 ||align="right"| 11 370 425 ||align="right"| 11 689 696 ||align="right"| 12 988 423 ||align="right"| 11 901 484
+|-
+|77 || {{flaga|BEL}} [[Belgia]]
+| align="right"| 10 379 067 ||align="right"| 10 392 226 ||align="right"| 10 403 951 ||align="right"| 10 414 336 ||align="right"| 10 431 477 ||align="right"| 10 438 353 ||align="right"| 11 409 077 ||align="right"| 11 491 346
+|-
+|78 || {{flaga|Burundi}} [[Burundi]]
+| align="right"| 8 090 068 ||align="right"| 8 390 505 ||align="right"| 8 691 005 ||align="right"| 8 988 091 ||align="right"| 10 216 190 ||align="right"| 10 557 259 ||align="right"| 11 099 298 ||align="right"| 11 466 756
+|-
+|79 || {{flaga|TUN}} [[Tunezja]]
+| align="right"| 10 175 014 ||align="right"| 10 276 158 ||align="right"| 10 383 577 ||align="right"| 10 486 339 ||align="right"| 10 629 186 ||align="right"| 10 732 900 ||align="right"| 11 134 588 ||align="right"| 11 403 800
+|-
+|80 || {{flaga|CUB}} [[Kuba]]
+| align="right"| 11 382 820 ||align="right"| 11 394 043 ||align="right"| 11 423 952 ||align="right"| 11 451 652 ||align="right"| 11 087 330 ||align="right"| 11 075 244 ||align="right"| 11 179 995 ||align="right"| 11 147 407
+|-
+|81 || {{flaga|Boliwia}} [[Boliwia]]
+| align="right"| 8 989 046 ||align="right"| 9 119 152 ||align="right"| 9 247 816 ||align="right"| 9 775 246 ||align="right"| 10 118 683 ||align="right"| 10 290 003 ||align="right"| 10 969 649 ||align="right"| 11 138 234
+|-
+|82 || {{flaga|Benin}} [[Benin]]
+| align="right"| 7 862 944 ||align="right"| 8 078 314 ||align="right"| 8 294 941 ||align="right"| 8 791 832 ||align="right"| 9 325 032 ||align="right"| 9 598 787 ||align="right"| 10 741 458 ||align="right"| 11 038 805
+|-
+|83 || {{flaga|Somalia}} [[Somalia]]
+| align="right"| 8 863 338 ||align="right"| 9 118 773 ||align="right"| 9 558 666 ||align="right"| 9 832 017 ||align="right"| 9 925 640 ||align="right"| 10 085 638 ||align="right"| 10 817 354 ||align="right"| 11 031 386
+|-
+|84 || {{flaga|PRT}} [[Portugalia]]
+| align="right"| 10 605 870 ||align="right"| 10 642 836 ||align="right"| 10 676 910 ||align="right"| 10 707 924 ||align="right"| 10 760 305 ||align="right"| 10 781 459 ||align="right"| 10 833 816 ||align="right"| 10 839 514
+|-
+|85 || {{flaga|GRC}} [[Grecja]]
+| align="right"| 10 688 058 ||align="right"| 10 706 290 ||align="right"| 10 722 816 ||align="right"| 10 737 428 ||align="right"| 10 760 136 ||align="right"| 10 767 827 ||align="right"| 10 773 253 ||align="right"| 10 768 477
+|-
+|86 || {{flaga|Dominikana}} [[Dominikana]]
+| align="right"| 9 183 984 ||align="right"| 9 365 818 ||align="right"| 9 507 133 ||align="right"| 9 650 054 ||align="right"| 9 956 648 ||align="right"| 10 088 598 ||align="right"| 10 606 865 ||align="right"| 10 734 247
+|-
+|87 || {{flaga|CZE}} [[Czechy]]
+| align="right"| 10 235 455 ||align="right"| 10 228 744 ||align="right"| 10 220 911 ||align="right"| 10 211 904 ||align="right"| 10 190 213 ||align="right"| 10 177 300 ||align="right"| 10 644 842 ||align="right"| 10 674 723
+|-
+|88 || {{flaga|Haiti}} [[Haiti]]
+| align="right"| 8 308 504 ||align="right"| 8 706 497 ||align="right"| 8 924 553 ||align="right"| 9 035 536 ||align="right"| 9 719 932 ||align="right"| 9 801 664 ||align="right"| 10 485 800 ||align="right"| 10 646 714
+|-
+|89 || {{flaga|Jordania}} [[Jordania]]
+| align="right"| 5 906 760 ||align="right"| 6 053 193 ||align="right"| 6 198 677 ||align="right"| 6 342 948 ||align="right"| 6 508 271 ||align="right"| 6 508 887 ||align="right"| 8 185 384 ||align="right"| 10 248 069
+|-
+|90 || {{flaga|AZE}} [[Azerbejdżan]]
+| align="right"| 7 961 619 ||align="right"| 8 120 247 ||align="right"| 8 177 717 ||align="right"| 8 238 672 ||align="right"| 8 372 373 ||align="right"| 9 493 600 ||align="right"| 9 872 765 ||align="right"| 9 961 396
+|-
+|91 || {{flaga|SWE}} [[Szwecja]]
+| align="right"| 9 016 596 ||align="right"| 9 031 088 ||align="right"| 9 045 389 ||align="right"| 9 059 651 ||align="right"| 9 088 728 ||align="right"| 9 103 788 ||align="right"| 9 880 604 ||align="right"| 9 960 487
+|-
+|92 || {{flaga|HUN}} [[Węgry]]
+| align="right"| 9 981 334 ||align="right"| 9 956 108 ||align="right"| 9 930 915 ||align="right"| 9 905 596 ||align="right"| 9 976 062 ||align="right"| 9 958 453 ||align="right"| 9 874 784 ||align="right"| 9 850 845
+|-
+|93 || {{flaga|BLR}} [[Białoruś]]
+| align="right"| 10 293 011 ||align="right"| 9 724 723 ||align="right"| 9 685 768 ||align="right"| 9 648 533 ||align="right"| 9 577 552 ||align="right"| 9 542 883 ||align="right"| 9 570 376 ||align="right"| 9 549 747
+|-
+|94 || {{flaga|Honduras}} [[Honduras]]
+| align="right"| 7 326 496 ||align="right"| 7 483 763 ||align="right"| 7 639 327 ||align="right"| 7 792 854 ||align="right"| 8 143 564 ||align="right"| 8 296 693 ||align="right"| 8 893 259 ||align="right"| 9 038 741
+|-
+|95 || {{flaga|AUT}} [[Austria]]
+| align="right"| 8 192 880 ||align="right"| 8 199 783 ||align="right"| 8 205 533 ||align="right"| 8 210 281 ||align="right"| 8 217 280 ||align="right"| 8 219 743 ||align="right"| 8 711 770 ||align="right"| 8 754 413
+|-
+|96 || {{flaga|Tadżykistan}} [[Tadżykistan]]
+| align="right"| 7 320 815 ||align="right"| 7 076 598 ||align="right"| 7 211 884 ||align="right"| 7 349 145 ||align="right"| 7 627 200 ||align="right"| 7 768 385 ||align="right"| 8 330 946 ||align="right"| 8 468 555
+|-
+|97 || {{flaga|ISR}} [[Izrael]]
+| align="right"| 6 352 117 ||align="right"| 6 426 679 ||align="right"| 7 112 359 ||align="right"| 7 233 701 ||align="right"| 7 473 052 ||align="right"| 7 590 758 ||align="right"| 8 174 527 ||align="right"| 8 299 706
+|-
+|98 || {{flaga|CHE}} [[Szwajcaria]]
+| align="right"| 7 523 934 ||align="right"| 7 554 661 ||align="right"| 7 581 520 ||align="right"| 7 604 467 ||align="right"| 7 639 961 ||align="right"| 7 655 628 ||align="right"| 8 179 294 ||align="right"| 8 236 303
+|-
+|99 || {{flaga|TGO}} [[Togo]]
+| align="right"| 5 548 702 ||align="right"| 5 701 579 ||align="right"| 5 858 673 ||align="right"| 6 019 877 ||align="right"| 6 771 993 ||align="right"| 6 961 049 ||align="right"| 7 756 937 ||align="right"| 7 965 055
+|-
+|100 || {{flaga|Hongkong}} ''[[Hongkong]]''
+| align="right"| 6 940 432 ||align="right"| 6 980 412 ||align="right"| 7 018 636 ||align="right"| 7 055 071 ||align="right"| 7 122 508 ||align="right"| 7 153 519 ||align="right"| 7 167 403 ||align="right"| 7 191 503
+|-
+|101 || {{flaga|Laos}} [[Laos]]
+| align="right"| 6 368 481 ||align="right"| 6 521 998 ||align="right"| 6 677 534 ||align="right"| 6 834 942 ||align="right"| 6 477 211 ||align="right"| 6 586 266 ||align="right"| 7 019 073 ||align="right"| 7 126 706
+|-
+|102 || {{flaga|SRB}} [[Serbia]]
+| align="right"| 9 396 411 ||align="right"| 10 150 265 ||align="right"| 10 159 046 ||align="right"| – ||align="right"| 7 310 555 ||align="right"| 7 276 604 ||align="right"| 7 143 921 ||align="right"| 7 111 024
+|-
+|103 || {{flaga|BGR}} [[Bułgaria]]
+| align="right"| 7 385 367 ||align="right"| 7 322 858 ||align="right"| 7 262 675 ||align="right"| 7 204 687 ||align="right"| 7 093 635 ||align="right"| 7 037 935 ||align="right"| 7 144 653 ||align="right"| 7 101 510
+|-
+|104 || {{flaga|PRY}} [[Paragwaj]]
+| align="right"| 6 506 464 ||align="right"| 6 669 086 ||align="right"| 6 831 306 ||align="right"| 6 995 655 ||align="right"| 6 459 058 ||align="right"| 6 541 591 ||align="right"| 6 862 812 ||align="right"| 6 943 739
+|-
+|105 || {{flaga|Papua-Nowa Gwinea}} [[Papua-Nowa Gwinea]]
+| align="right"| 5 670 544 ||align="right"| 5 795 887 ||align="right"| 5 931 769 ||align="right"| 6 057 263 ||align="right"| 6 187 591 ||align="right"| 6 310 129 ||align="right"| 6 791 317 ||align="right"| 6 909 701
+|-
+|106 || {{flaga|Libia}} [[Libia]]
+| align="right"| 5 900 754 ||align="right"| 6 036 914 ||align="right"| 6 173 579 ||align="right"| 6 310 434 ||align="right"| 6 597 960 ||align="right"| 6 733 620 ||align="right"| 6 541 948 ||align="right"| 6 653 210
+|-
+|107 || {{flaga|Liban}} [[Liban]]
+| align="right"| 3 874 050 ||align="right"| 3 925 502 ||align="right"| 3 971 941 ||align="right"| 4 017 095 ||align="right"| 4 143 101 ||align="right"| 4 140 289 ||align="right"| 6 237 738 ||align="right"| 6 229 794
+|-
+|108 || {{flaga|Salwador}} [[Salwador]]
+| align="right"| 6 822 378 ||align="right"| 6 948 073 ||align="right"| 7 066 403 ||align="right"| 7 185 218 ||align="right"| 6 071 774 ||align="right"| 6 090 646 ||align="right"| 6 156 670 ||align="right"| 6 172 011
+|-
+|109 || {{flaga|Sierra Leone}} [[Sierra Leone]]
+| align="right"| 6 005 250 ||align="right"| 6 144 562 ||align="right"| 6 294 774 ||align="right"| 6 440 053 ||align="right"| 5 363 669 ||align="right"| 5 485 998 ||align="right"| 6 018 888 ||align="right"| 6 163 195
+|-
+|110 || {{flaga|Zjednoczone Emiraty Arabskie}} [[Zjednoczone Emiraty Arabskie]]
+| align="right"| 2 602 713 ||align="right"| 4 444 011 ||align="right"| 4 621 399 ||align="right"| 4 798 491 ||align="right"| 5 148 664 ||align="right"| 5 314 317 ||align="right"| 5 927 482 ||align="right"| 6 072 475
+|-
+|111 || {{flaga|Nikaragua}} [[Nikaragua]]
+| align="right"| 5 570 129 ||align="right"| 5 675 356 ||align="right"| 5 785 846 ||align="right"| 5 891 199 ||align="right"| 5 666 301 ||align="right"| 5 727 707 ||align="right"| 5 966 798 ||align="right"| 6 025 951
+|-
+|112 || {{flaga|Erytrea}} [[Erytrea]]
+| align="right"| 4 786 994 ||align="right"| 4 906 585 ||align="right"| 5 028 475 ||align="right"| 5 647 168 ||align="right"| 5 939 484 ||align="right"| 6 086 495 ||align="right"| 5 869 869 ||align="right"| 5 918 919
+|-
+|113 || {{flaga|Singapur}} [[Singapur]]
+| align="right"| 4 492 150 ||align="right"| 4 553 009 ||align="right"| 4 608 167 ||align="right"| 4 657 542 ||align="right"| 4 740 737 ||align="right"| 5 353 494 ||align="right"| 5 781 728 ||align="right"| 5 888 926
+|-
+|114 || {{flaga|Kirgistan}} [[Kirgistan]]
+| align="right"| 5 213 898 ||align="right"| 5 284 149 ||align="right"| 5 356 869 ||align="right"| 5 431 747 ||align="right"| 5 587 443 ||align="right"| 5 496 737 ||align="right"| 5 727 553 ||align="right"| 5 789 122
+|-
+|115 || {{flaga|Republika Środkowoafrykańska}} [[Republika Środkowoafrykańska]]
+| align="right"| 4 303 356 ||align="right"| 4 369 038 ||align="right"| 4 434 873 ||align="right"| 4 511 488 ||align="right"| 4 950 027 ||align="right"| 5 057 208 ||align="right"| 5 507 257 ||align="right"| 5 625 118
+|-
+|116 || {{flaga|DNK}} [[Dania]]
+| align="right"| 5 450 661 ||align="right"| 5 468 120 ||align="right"| 5 484 723 ||align="right"| 5 500 510 ||align="right"| 5 529 888 ||align="right"| 5 543 453 ||align="right"| 5 593 785 ||align="right"| 5 605 948
+|-
+|117 || {{flaga|FIN}} [[Finlandia]]
+| align="right"| 5 223 442 ||align="right"| 5 238 460 ||align="right"| 5 244 749 ||align="right"| 5 250 275 ||align="right"| 5 259 250 ||align="right"| 5 262 930 ||align="right"| 5 498 211 ||align="right"| 5 518 371
+|-
+|118 || {{flaga|SVK}} [[Słowacja]]
+| align="right"| 5 439 448 ||align="right"| 5 447 502 ||align="right"| 5 455 407 ||align="right"| 5 463 046 ||align="right"| 5 477 038 ||align="right"| 5 483 088 ||align="right"| 5 445 802 ||align="right"| 5 445 829
+|-
+|119 || {{flaga|Turkmenistan}} [[Turkmenistan]]
+| align="right"| 5 042 920 ||align="right"| 5 097 028 ||align="right"| 5 179 571 ||align="right"| 4 884 887 ||align="right"| 4 997 503 ||align="right"| 5 054 828 ||align="right"| 5 291 317 ||align="right"| 5 351 277
+|-
+|120 || {{flaga|NOR}} [[Norwegia]]
+| align="right"| 4 610 820 ||align="right"| 4 627 926 ||align="right"| 4 644 457 ||align="right"| 4 660 539 ||align="right"| 4 691 849 ||align="right"| 4 707 270 ||align="right"| 5 265 158 ||align="right"| 5 320 045
+|-
+|121 || {{flaga|IRL}} [[Irlandia]]
+| align="right"| 4 062 235 ||align="right"| 4 109 086 ||align="right"| 4 156 119 ||align="right"| 4 203 200 ||align="right"| 4 670 976 ||align="right"| 4 722 028 ||align="right"| 4 952 473 ||align="right"| 5 011 102
+|-
+|122 || {{flaga|Kongo}} [[Kongo]]
+| align="right"| 3 702 314 ||align="right"| 3 800 610 ||align="right"| 3 903 318 ||align="right"| 4 012 809 ||align="right"| 4 243 929 ||align="right"| 4 366 266 ||align="right"| 4 852 412 ||align="right"| 4 954 674
+|-
+|123 || {{flaga|CRI}} [[Kostaryka]]
+| align="right"| 4 075 261 ||align="right"| 4 133 884 ||align="right"| 4 195 914 ||align="right"| 4 253 877 ||align="right"| 4 576 562 ||align="right"| 4 636 348 ||align="right"| 4 872 543 ||align="right"| 4 930 258
+|-
+|124 || {{flaga|GEO}} [[Gruzja]]
+| align="right"| 4 661 473 ||align="right"| 4 646 003 ||align="right"| 4 630 841 ||align="right"| 4 615 807 ||align="right"| 4 585 874 ||align="right"| 4 570 934 ||align="right"| 4 928 052 ||align="right"| 4 926 330
+|-
+|125 || {{flaga|Liberia}} [[Liberia]]
+| align="right"| 2 042 004 ||align="right"| 3 195 931 ||align="right"| 3 334 587 ||align="right"| 3 441 790 ||align="right"| 3 786 764 ||align="right"| 3 887 886 ||align="right"| 4 299 944 ||align="right"| 4 689 021
+|-
+|126 || {{flaga|NZL}} [[Nowa Zelandia]]
+| align="right"| 4 076 140 ||align="right"| 4 115 771 ||align="right"| 4 173 460 ||align="right"| 4 213 418 ||align="right"| 4 290 347 ||align="right"| 4 327 944 ||align="right"| 4 474 549 ||align="right"| 4 510 327
+|-
+|127 || {{flaga|HRV}} [[Chorwacja]]
+| align="right"| 4 494 749 ||align="right"| 4 493 312 ||align="right"| 4 491 543 ||align="right"| 4 489 409 ||align="right"| 4 483 804 ||align="right"| 4 480 043 ||align="right"| 4 313 707 ||align="right"| 4 292 095
+|-
+|128 || {{flaga|BIH}} [[Bośnia i Hercegowina]]
+| align="right"| 4 498 976 ||align="right"| 4 552 198 ||align="right"| 4 590 310 ||align="right"| 4 613 414 ||align="right"| 4 622 163 ||align="right"| 4 622 292 ||align="right"| 3 861 912 ||align="right"| 3 856 181
+|-
+|129 || {{flaga|Mauretania}} [[Mauretania]]
+| align="right"| 3 177 388 ||align="right"| 3 270 065 ||align="right"| 3 364 940 ||align="right"| 3 129 486 ||align="right"| 3 281 634 ||align="right"| 3 359 185 ||align="right"| 3 677 293 ||align="right"| 3 758 571
+|-
+|130 || {{flaga|Panama}} [[Panama]]
+| align="right"| 3 191 319 ||align="right"| 3 242 173 ||align="right"| 3 292 693 ||align="right"| 3 360 474 ||align="right"| 3 460 462 ||align="right"| 3 510 045 ||align="right"| 3 705 246 ||align="right"| 3 753 142
+|-
+|131 || {{flaga|Mołdawia}} [[Mołdawia]]
+| align="right"| 4 466 706 ||align="right"| 4 320 490 ||align="right"| 4 324 450 ||align="right"| 4 320 748 ||align="right"| 4 314 377 ||align="right"| 3 656 843 ||align="right"| 3 510 485 ||align="right"| 3 474 121
+|-
+|132 || {{flaga|Oman}} [[Oman]]
+| align="right"| 3 102 229 ||align="right"| 3 204 897 ||align="right"| 3 311 640 ||align="right"| 3 418 085 ||align="right"| 3 027 959 ||align="right"| 3 090 150 ||align="right"| 3 355 262 ||align="right"| 3 424 386
+|-
+|133 || {{flaga|URY}} [[Urugwaj]]
+| align="right"| 3 431 932 ||align="right"| 3 460 607 ||align="right"| 3 477 778 ||align="right"| 3 494 382 ||align="right"| 3 308 535 ||align="right"| 3 316 328 ||align="right"| 3 351 016 ||align="right"| 3 360 148
+|-
+|134 || {{flaga|Portoryko}} ''[[Portoryko]]''
+| align="right"| 3 927 188 ||align="right"| 3 944 259 ||align="right"| 3 958 128 ||align="right"| 3 971 020 ||align="right"| 3 989 133 ||align="right"| 3 998 905 ||align="right"| 3 578 056 ||align="right"| 3 351 827
+|-
+|135 || {{flaga|Mongolia}} [[Mongolia]]
+| align="right"| 2 832 224 ||align="right"| 2 951 786 ||align="right"| 2 996 081 ||align="right"| 3 041 142 ||align="right"| 3 133 318 ||align="right"| 3 179 997 ||align="right"| 3 031 330 ||align="right"| 3 068 243
+|-
+|136 || {{flaga|ALB}} [[Albania]]
+| align="right"| 3 581 655 ||align="right"| 3 600 523 ||align="right"| 3 619 778 ||align="right"| 3 639 453 ||align="right"| 2 994 667 ||align="right"| 3 002 859 ||align="right"| 3 038 594 ||align="right"| 3 047 987
+|-
+|137 || {{flaga|ARM}} [[Armenia]]
+| align="right"| 2 976 372 ||align="right"| 2 971 650 ||align="right"| 2 968 586 ||align="right"| 2 967 004 ||align="right"| 2 967 975 ||align="right"| 2 970 495 ||align="right"| 3 051 250 ||align="right"| 3 045 191
+|-
+|138 || {{flaga|Jamajka}} [[Jamajka]]
+| align="right"| 2 758 124 ||align="right"| 2 780 132 ||align="right"| 2 804 332 ||align="right"| 2 825 928 ||align="right"| 2 868 380 ||align="right"| 2 889 187 ||align="right"| 2 970 340 ||align="right"| 2 990 561
+|-
+|139 || {{flaga|Kuwejt}} [[Kuwejt]]
+| align="right"| 2 418 393 ||align="right"| 2 505 559 ||align="right"| 2 596 799 ||align="right"| 2 691 158 ||align="right"| 2 595 628 ||align="right"| 2 646 314 ||align="right"| 2 832 776 ||align="right"| 2 875 422
+|-
+|140 || {{flaga|Litwa}} [[Litwa]]
+| align="right"| 3 585 906 ||align="right"| 3 575 439 ||align="right" 3 205 565| 3 565 205 ||align="right"| 3 555 179 ||align="right"| 3 535 547 ||align="right"| 3 525 761 ||align="right"| 2 854 235 ||align="right"| 2 823 859
+|-
+| 141 || ''[[Zachodni Brzeg]]''
+| align="right"| 2 460 492 ||align="right"| 2 535 927 ||align="right"| 2 611 904 ||align="right"| 2 461 267 ||align="right"| 2 568 555 ||align="right"| 2 622 544 ||align="right"| 2 697 686 ||align="right"| 2 747 943
+|-
+|142 || {{flaga|Namibia}} [[Namibia]]
+| align="right"| 2 044 147 ||align="right"| 2 055 080 ||align="right"| 2 088 669 ||align="right"| 2 108 665 ||align="right"| 2 147 585 ||align="right"| 2 165 828 ||align="right"| 2 436 469 ||align="right"| 2 484 780
+|-
+|143 || {{flaga|Katar}} [[Katar]]
+| align="right"| 967 602 ||align="right"| 1 152 675 ||align="right"| 1 356 635 ||align="right"| 1 564 285 ||align="right"| 1 911 016 ||align="right"| 2 051 591 ||align="right"| 2 258 283 ||align="right"| 2 314 307
+|-
+| 144 || {{flaga|Botswana}} [[Botswana]]
+| align="right"| 1 639 833 ||align="right"| 1 815 508 ||align="right"| 1 842 323 ||align="right"| 1 990 876 ||align="right"| 2 065 398 ||align="right"| 2 098 018 ||align="right"| 2 209 208 ||align="right"| 2 214 858
+|-
+| 145 || {{flaga|MKD}} [[Macedonia]]
+| align="right"| 2 050 554 ||align="right"| 2 055 915 ||align="right"| 2 061 315 ||align="right"| 2 066 718 ||align="right"| 2 077 328 ||align="right"| 2 082 370 ||align="right"| 2 100 025 ||align="right"| 2 103 721
+|-
+|146 || {{flaga|Gambia}} [[Gambia]]
+| align="right"| 1 641 564 ||align="right"| 1 688 359 ||align="right"| 1 735 464 ||align="right"| 1 782 893 ||align="right"| 1 797 860 ||align="right"| 1 840 454 ||align="right"| 2 009 648 ||align="right"| 2 051 363
+|-
+|147 || {{flaga|SVN}} [[Słowenia]]
+| align="right"| 2 010 347 ||align="right"| 2 009 245 ||align="right"| 2 007 711 ||align="right"| 2 005 692 ||align="right"| 2 000 092 ||align="right"| 1 996 617 ||align="right"| 1 978 029 ||align="right"| 1 972 126
+|-
+|148 || {{flaga|LSO}} [[Lesotho]]
+| align="right"| 2 022 331 ||align="right"| 2 125 262 ||align="right"| 2 128 180 ||align="right"| 2 130 819 ||align="right"| 1 924 886 ||align="right"| 1 930 493 ||align="right"| 1 953 070 ||align="right"| 1 958 042
+|-
+|149 || {{flaga|Łotwa}} [[Łotwa]]
+| align="right"| 2 274 735 ||align="right"| 2 259 810 ||align="right"| 2 245 423 ||align="right"| 2 231 503 ||align="right"| 2 204 708 ||align="right"| 2 191 580 ||align="right"| 1 965 686 ||align="right"| 1 944 643
+|-
+| 150 || {{flaga|Kosowo}} [[Kosowo]]
+| align="right"| – ||align="right"| – ||align="right"| 2 126 708 ||align="right"| 1 804 838 ||align="right"| 1 825 632 ||align="right"| 1 836 529 ||align="right"| 1 883 018 ||align="right"| 1 895 250
+|-
+|151 || ''[[Strefa Gazy]]''
+| align="right"| 1 428 757 ||align="right"| 1 482 405 ||align="right"| 1 537 269 ||align="right"| 1 558 592 ||align="right"| 1 657 155 ||align="right"| 1 710 257 ||align="right"| 1 753 327 ||align="right"| 1 795 183
+|-
+|152 || {{flaga|Gwinea Bissau}} [[Gwinea Bissau]]
+| align="right"| 1 442 029 ||align="right"| 1 472 780 ||align="right"| 1 503 182 ||align="right"| 1 533 964 ||align="right"| 1 596 677 ||align="right"| 1 628 603 ||align="right"| 1 759 159 ||align="right"| 1 792 338
+|-
+| 153 || {{flaga|Gabon}} [[Gabon]]
+| align="right"| 1 424 906 ||align="right"| 1 454 867 ||align="right"| 1 485 832 ||align="right"| 1 514 993 ||align="right"| 1 576 665 ||align="right"| 1 608 321 ||align="right"| 1 738 541 ||align="right"| 1 772 255
+|-
+| 154 || {{flaga|Eswatini}} [[Eswatini]]
+| align="right"| 1 136 334 ||align="right"| 1 133 066 ||align="right"| 1 128 814 ||align="right"| 1 123 913 ||align="right"| 1 370 424 ||align="right"| 1 386 914 ||align="right"| 1 451 428 ||align="right"| 1 467 152
+|-
+|155 || {{flaga|Bahrajn}} [[Bahrajn]]
+| align="right"| 698 585 ||align="right"| 708 573 ||align="right"| 718 306 ||align="right"| 727 785 ||align="right"| 1 214 705 ||align="right"| 1 248 348 ||align="right"| 1 378 904 ||align="right"| 1 410 942
+|-
+|156 || {{flaga|Mauritius}} [[Mauritius]]
+| align="right"| 1 240 827 ||align="right"| 1 250 882 ||align="right"| 1 274 189 ||align="right"| 1 284 264 ||align="right"| 1 303 717 ||align="right"| 1 313 095 ||align="right"| 1 348 242 ||align="right"| 1 356 388
+|-
+|157 || {{flaga|Timor Wschodni}} [[Timor Wschodni]]
+| align="right"| 1 062 777 ||align="right"| 1 084 971 ||align="right"| 1 108 777 ||align="right"| 1 131 612 ||align="right"| 1 177 834 ||align="right"| 1 201 255 ||align="right"| 1 261 072 ||align="right"| 1 291 358
+|-
+|158 || {{flaga|EST}} [[Estonia]]
+| align="right"| 1 324 333 ||align="right"| 1 315 912 ||align="right"| 1 307 605 ||align="right"| 1 299 371 ||align="right"| 1 282 963 ||align="right"| 1 274 709 ||align="right"| 1 258 545 ||align="right"| 1 251 581
+|-
+|159 || {{flaga|CYP}} [[Cypr]]
+| align="right"| 784 301 ||align="right"| 788 457 ||align="right"| 792 604 ||align="right"| 796 740 ||align="right"| 1 120 489 ||align="right"| 1 138 071 ||align="right"| 1 205 575 ||align="right"| 1 221 549
+|-
+|160 || {{flaga|Trynidad i Tobago}} [[Trynidad i Tobago]]
+| align="right"| 1 065 842 ||align="right"| 1 056 608 ||align="right"| 1 047 366 ||align="right"| 1 229 953 ||align="right"| 1 227 505 ||align="right"| 1 226 383 ||align="right"| 1 220 479 ||align="right"| 1 218 208
+|-
+| 161 || {{flaga|FJI}} [[Fidżi]]
+| align="right"| 905 949 ||align="right"| 918 675 ||align="right"| 931 741 ||align="right"| 944 720 ||align="right"| 883 125 ||align="right"| 890 057 ||align="right"| 915 303 ||align="right"| 920 938
+|-
+| 162 || {{flaga|Dżibuti}} [[Dżibuti]]
+| align="right"| 486 530 ||align="right"| 496 374 ||align="right"| 506 221 ||align="right"| 516 055 ||align="right"| 757 074 ||align="right"| 774 389 ||align="right"| 846 687 ||align="right"| 865 267
+|-
+|163 || {{flaga|Komory}} [[Komory]]
+| align="right"| 690 948 ||align="right"| 711 417 ||align="right"| 731 775 ||align="right"| 752 438 ||align="right"| 794 683 ||align="right"| 737 284 ||align="right"| 794 678 ||align="right"| 808 080
+|-
+|164 || {{flaga|Gwinea Równikowa}} [[Gwinea Równikowa]]
+| align="right"| 540 109 ||align="right"| 551 201 ||align="right"| 616 459 ||align="right"| 633 441 ||align="right"| 668 225 ||align="right"| 685 991 ||align="right"| 759 451 ||align="right"| 778 358
+|-
+| 165 || {{flaga|Bhutan}} [[Bhutan]]
+| align="right"| 2 279 723 ||align="right"| 2 327 849 ||align="right"| 682 321 ||align="right"| 691 141 ||align="right"| 708 427 ||align="right"| 716 896 ||align="right"| 750 125 ||align="right"| 758 288
+|-
+|166 || {{flaga|Gujana}} [[Gujana]]
+| align="right"| 767 245 ||align="right"| 769 095 ||align="right"| 770 794 ||align="right"| 772 298 ||align="right"| 744 768 ||align="right"| 741 908 ||align="right"| 735 909 ||align="right"| 737 718
+|-
+|167 || {{flaga|Wyspy Salomona}} [[Wyspy Salomona]]
+| align="right"| 552 438 ||align="right"| 566 842 ||align="right"| 581 318 ||align="right"| 595 613 ||align="right"| 571 890 ||align="right"| 584 578 ||align="right"| 635 027 ||align="right"| 647 581
+|-
+|168 || {{flaga|MNE}} [[Czarnogóra]]
+| align="right"| 630 548 ||align="right"| 684 736 ||align="right"| 678 177 ||align="right"| 672 180 ||align="right"| 661 807 ||align="right"| 657 394 ||align="right"| 644 578 ||align="right"| 642 550
+|-
+|169 || {{flaga|Sahara Zachodnia}} [[Sahara Zachodnia]]
+| align="right"| 273 008 ||align="right"| 382 617 ||align="right"| 393 831 ||align="right"| 405 210 ||align="right"| 507 160 ||align="right"| 522 928 ||align="right"| 587 020 ||align="right"| 603 253
+|-
+|170 || {{flaga|MAC}} ''[[Makau]]''
+| align="right"| 453 125 ||align="right"| 456 989 ||align="right"| 460 823 ||align="right"| 559 846 ||align="right"| 573 003 ||align="right"| 578 025 ||align="right"| 597 425 ||align="right"| 601 969
+|-
+|171 || {{flaga|LUX}} [[Luksemburg]]
+| align="right"| 474 413 ||align="right"| 480 222 ||align="right"| 486 006 ||align="right"| 491 775 ||align="right"| 503 302 ||align="right"| 509 074 ||align="right"| 582 291 ||align="right"| 594 130
+|-
+|172 || {{flaga|Surinam}} [[Surinam]]
+| align="right"| 439 117 ||align="right"| 470 784 ||align="right"| 475 996 ||align="right"| 481 267 ||align="right"| 491 989 ||align="right"| 560 157 ||align="right"| 585 824 ||align="right"| 591 919
+|-
+|173 || {{flaga|Republika Zielonego Przylądka}} [[Republika Zielonego Przylądka]]
+| align="right"| 420 979 ||align="right"| 423 613 ||align="right"| 426 998 ||align="right"| 429 474 ||align="right"| 516 100 ||align="right"| 523 568 ||align="right"| 553 432 ||align="right"| 560 899
+|-
+|174 || {{flaga|Brunei}} [[Brunei]]
+| align="right"| 379 444 ||align="right"| 374 577 ||align="right"| 381 371 ||align="right"| 388 190 ||align="right"| 401 890 ||align="right"| 408 786 ||align="right"| 436 620 ||align="right"| 443 593
+|-
+|175 || {{flaga|MLT}} [[Malta]]
+| align="right"| 400 214 ||align="right"| 401 880 ||align="right"| 403 532 ||align="right"| 405 165 ||align="right"| 408 333 ||align="right"| 409 836 ||align="right"| 415 196 ||align="right"| 416 338
+|-
+| 176 || {{flaga|Malediwy}} [[Malediwy]]
+| align="right"| 359 008 ||align="right"| 369 031 ||align="right"| 379 174 ||align="right"| 396 334 ||align="right"| 394 999 ||align="right"| 394 451 ||align="right"| 392 960 ||align="right"| 392 709
+|-
+| 177 || {{flaga|Belize}} [[Belize]]
+| align="right"| 287 730 ||align="right"| 294 385 ||align="right"| 301 270 ||align="right"| 307 899 ||align="right"| 321 115 ||align="right"| 327 719 ||align="right"| 353 858 ||align="right"| 360 346
+|-
+|178 || {{flaga|ISL}} [[Islandia]]
+| align="right"| 299 388 ||align="right"| 301 931 ||align="right"| 304 367 ||align="right"| 306 694 ||align="right"| 311 058 ||align="right"| 313 183 ||align="right"| 335 878 ||align="right"| 339 747
+|-
+|179 || {{flaga|BHS}} [[Bahamy]]
+| align="right"| 303 770 ||align="right"| 305 655 ||align="right"| 307 451 ||align="right"| 309 156 ||align="right"| 313 312 ||align="right"| 316 182 ||align="right"| 327 316 ||align="right"| 329 988
+|-
+| 180 || {{flaga|Barbados}} [[Barbados]]
+| align="right"| 279 912 ||align="right"| 280 946 ||align="right"| 281 968 ||align="right"| 284 589 ||align="right"| 286 705 ||align="right"| 287 733 ||align="right"| 291 495 ||align="right"| 292 336
+|-
+| 181 || {{flaga|Polinezja Francuska}} ''[[Polinezja Francuska]]''
+| align="right"| 274 578 ||align="right"| 278 963 ||align="right"| 283 019 ||align="right"| 287 032 ||align="right"| 294 935 ||align="right"| 274 512 ||align="right"| 285 321 ||align="right"| 287 881
+|-
+|182 || {{flaga|Vanuatu}} [[Vanuatu]]
+| align="right"| 208 869 ||align="right"| 211 971 ||align="right"| 215 446 ||align="right"| 218 519 ||align="right"| 224 564 ||align="right"| 227 574 ||align="right"| 277 554 ||align="right"| 282 814
+|-
+|183 || {{flaga|Nowa Kaledonia}} ''[[Nowa Kaledonia]]''
+| align="right"| 219 246 ||align="right"| 221 943 ||align="right"| 224 824 ||align="right"| 227 436 ||align="right"| 256 275 ||align="right"| 260 166 ||align="right"| 275 355 ||align="right"| 279 070
+|-
+|184 || {{flaga|Wyspy Świętego Tomasza i Książęca}} [[Wyspy Świętego Tomasza i Książęca]]
+| align="right"| 193 413 ||align="right"| 199 579 ||align="right"| 206 178 ||align="right"| 212 679 ||align="right"| 179 506 ||align="right"| 183 176 ||align="right"| 197 541 ||align="right"| 201 025
+|-
+|185 || {{flaga|Samoa}} [[Samoa]]
+| align="right"| 176 908 ||align="right"| 214 265 ||align="right"| 217 083 ||align="right"| 219 998 ||align="right"| 193 161 ||align="right"| 194 320 ||align="right"| 198 926 ||align="right"| 200 108
+|-
+|186 || {{flaga|Guam}} ''[[Guam]]''
+| align="right"| 171 019 ||align="right"| 173 456 ||align="right"| 175 877 ||align="right"| 178 430 ||align="right"| 185 674 ||align="right"| 159 914 ||align="right"| 162 741 ||align="right"| 167 358
+|-
+|187 || {{flaga|Saint Lucia}} [[Saint Lucia]]
+| align="right"| 168 458 ||align="right"| 170 649 ||align="right"| 172 884 ||align="right"| 160 267 ||align="right"| 161 557 ||align="right"| 162 178 ||align="right"| 164 464 ||align="right"| 164 994
+|-
+|188 || {{flaga|Curaçao}} ''[[Curaçao]]''
+| align="right"| – ||align="right"| – ||align="right"| – ||align="right"| – ||align="right"| – ||align="right"| 142 180 ||align="right"| 149 035 ||align="right"| 149 648
+|-
+|189 || {{flaga|Aruba}} ''[[Aruba]]''
+| align="right"| 71 891 ||align="right"| 100 018 ||align="right"| 101 541 ||align="right"| 103 065 ||align="right"| 106 113 ||align="right"| 107 635 ||align="right"| 113 648 ||align="right"| 115 120
+|-
+|190 || {{flaga|Grenada}} [[Grenada]]
+| align="right"| 89 703 ||align="right"| 89 971 ||align="right"| 90 343 ||align="right"| 90 739 ||align="right"| 108 419 ||align="right"| 109 011 ||align="right"| 111 219 ||align="right"| 111 724
+|-
+|191 || {{flaga|Kiribati}} [[Kiribati]]
+| align="right"| 105 432 ||align="right"| 107 817 ||align="right"| 110 356 ||align="right"| 112 850 ||align="right"| 100 743 ||align="right"| 101 998 ||align="right"| 106 925 ||align="right"| 108 145
+|-
+|192 || {{flaga|VIR}} ''[[Wyspy Dziewicze]]''
+| align="right"| 108 605 ||align="right"| 108 448 ||align="right"| 108 210 ||align="right"| 109 825 ||align="right"| 109 666 ||align="right"| 109 574 ||align="right"| 102 951 ||align="right"| 107 268
+|-
+|193 || {{flaga|Tonga}} [[Tonga]]
+| align="right"| 114 689 ||align="right"| 116 921 ||align="right"| 119 009 ||align="right"| 120 898 ||align="right"| 105 916 ||align="right"| 106 146 ||align="right"| 106 513 ||align="right"| 106 479
+|-
+|194 || {{flaga|Mikronezja}} [[Mikronezja]]
+| align="right"| 108 004 ||align="right"| 107 862 ||align="right"| 107 665 ||align="right"| 107 434 ||align="right"| 106 836 ||align="right"| 106 487 ||align="right"| 104 719 ||align="right"| 104 196
+|-
+| 195 || {{flaga|Saint Vincent i Grenadyny}} [[Saint Vincent i Grenadyny]]
+| align="right"| 117 848 ||align="right"| 118 149 ||align="right"| 118 432 ||align="right"| 104 574 ||align="right"| 103 869 ||align="right"| 103 537 ||align="right"| 102 350 ||align="right"| 102 089
+|-
+|196 || {{flaga|Jersey}} ''[[Jersey]]''
+| align="right"| 91 084 ||align="right"| 91 321 ||align="right"| 91 533 ||align="right"| 91 626 ||align="right"| 94 161 ||align="right"| 94 949 ||align="right"| 98 069 ||align="right"| 98 840
+|-
+|197 || {{flaga|ATG}} [[Antigua i Barbuda]]
+| align="right"| 69 108 ||align="right"| 69 481 ||align="right"| 69 842 ||align="right"| 85 632 ||align="right"| 87 884 ||align="right"| 89 018 ||align="right"| 93 581 ||align="right"| 94 731
+|-
+| 198 || {{flaga|Seszele}} [[Seszele]]
+| align="right"| 81 541 ||align="right"| 81 895 ||align="right"| 82 247 ||align="right"| 87 476 ||align="right"| 89 188 ||align="right"| 90 024 ||align="right"| 93 186 ||align="right"| 93 920
+|-
+|199 || {{flaga|Wyspa Man}} ''[[Wyspa Man]]''
+| align="right"| 75 441 ||align="right"| 75 831 ||align="right"| 76 220 ||align="right"| 76 120 ||align="right"| 84 655 ||align="right"| 85 421 ||align="right"| 88 185 ||align="right"| 88 815
+|-
+|200 || {{flaga|AND}} [[Andora]]
+| align="right"| 71 201 ||align="right"| 71 822 ||align="right"| 72 413 ||align="right"| 83 888 ||align="right"| 84 825 ||align="right"| 85 082 ||align="right"| 85 660 ||align="right"| 85 702
+|-
+|201 || {{flaga|Wyspy Marshalla}} [[Wyspy Marshalla]]
+| align="right"| 60 422 ||align="right"| 61 815 ||align="right"| 63 174 ||align="right"| 64 522 ||align="right"| 67 182 ||align="right"| 68 480 ||align="right"| 73 376 ||align="right"| 74 539
+|-
+|202 || {{flaga|Dominika}} [[Dominika]]
+| align="right"| 68 910 ||align="right"| 72 386 ||align="right"| 72 514 ||align="right"| 72 660 ||align="right"| 72 969 ||align="right"| 73 126 ||align="right"| 73 757 ||align="right"| 73 897
+|-
+| 203 || {{flaga|Bermudy}} ''[[Bermudy]]''
+| align="right"| 65 773 ||align="right"| 66 163 ||align="right"| 66 536 ||align="right"| 67 837 ||align="right"| 68 679 ||align="right"| 69 080 ||align="right"| 70 537 ||align="right"| 70 864
+|-
+|204 || {{flaga|Guernsey}} ''[[Guernsey]]''
+| align="right"| 65 409 ||align="right"| 65 573 ||align="right"| 65 726 ||align="right"| 65 870 ||align="right"| 65 068 ||align="right"| 65 345 ||align="right"| 66 297 ||align="right"| 66 502
+|-
+|205 || {{flaga|CYM}} ''[[Kajmany (wyspy)|Kajmany]]''
+| align="right"| 45 436 ||align="right"| 46 600 ||align="right"| 47 862 ||align="right"| 49 035 ||align="right"| 51 384 ||align="right"| 57 695 ||align="right"| 57 268 ||align="right"| 58 441
+|-
+|206 || {{flaga|Grenlandia}} ''[[Grenlandia]]''
+| align="right"| 56 361 ||align="right"| 56 344 ||align="right"| 56 326 ||align="right"| 57 600 ||align="right"| 57 670 ||align="right"| 57 695 ||align="right"| 57 728 ||align="right"| 57 713
+|-
+|207 || {{flaga|Saint Kitts i Nevis}} [[Saint Kitts i Nevis]]
+| align="right"| 39 129 ||align="right"| 39 349 ||align="right"| 39 619 ||align="right"| 40 131 ||align="right"| 50 314 ||align="right"| 50 726 ||align="right"| 52 329 ||align="right"| 52 715
+|-
+|208 || {{flaga|Turks i Caicos}} ''[[Turks i Caicos]]''
+| align="right"| 21 152 ||align="right"| 21 746 ||align="right"| 22 352 ||align="right"| 22 942 ||align="right"| 44 819 ||align="right"| 46 335 ||align="right"| 51 430 ||align="right"| 52 570
+|-
+|209 || {{flaga|Mariany Północne}} ''[[Mariany Północne]]''
+| align="right"| 82 459 ||align="right"| 84 546 ||align="right"| 86 616 ||align="right"| 88 662 ||align="right"| 46 050 ||align="right"| 44 582 ||align="right"| 53 467 ||align="right"| 52 263
+|-
+|210 || {{flaga|Samoa Amerykańskie}} ''[[Samoa Amerykańskie]]''
+| align="right"| 57 794 ||align="right"| 57 663 ||align="right"| 57 496 ||align="right"| 65 628 ||align="right"| 67 242 ||align="right"| 68 061 ||align="right"| 54 194 ||align="right"| 51 504
+|-
+|211 || {{flaga|FRO}} ''[[Wyspy Owcze]]''
+| align="right"| 47 246 ||align="right"| 47 511 ||align="right"| 48 668 ||align="right"| 48 856 ||align="right"| 49 267 ||align="right"| 49 483 ||align="right"| 50 456 ||align="right"| 50 730
+|-
+|212 || {{flaga|Sint Maarten}} ''[[Sint Maarten (terytorium)|Sint Maarten]]''
+| align="right"| – ||align="right"| – ||align="right"| – ||align="right"| – ||align="right"| – ||align="right"| 37 429 ||align="right"| 41 486 ||align="right"| 42 083
+|-
+|213 || {{flaga|Liechtenstein}} [[Liechtenstein]]
+| align="right"| 33 987 ||align="right"| 34 247 ||align="right"| 34 498 ||align="right"| 34 761 ||align="right"| 35 236 ||align="right"| 36 713 ||align="right"| 37 937 ||align="right"| 38 244
