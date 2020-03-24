@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="pacjenci_recepty" directorySegmentName="seg_0" id="59D69EE4-DD14-F318-2226-30275EFFA48C">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-24 21:16:21 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>posiada</nameOnSource>
+<nameOnTarget>należy do</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C0AF5979-2AA6-73F3-4A02-9085EF7C52C1</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>724F7E25-870D-C0DD-4CF9-65B035F330DC</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

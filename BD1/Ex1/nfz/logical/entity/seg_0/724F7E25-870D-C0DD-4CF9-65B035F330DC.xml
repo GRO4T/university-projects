@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="724F7E25-870D-C0DD-4CF9-65B035F330DC" name="Recepty">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-24 20:59:41 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+</Entity>
