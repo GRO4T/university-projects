@@ -1,0 +1,4 @@
+7. NFZ już kilkanaście lat próbuje stworzyć Elektroniczną Kartotekę Pacjenta. Wykonaj model
+DB aby pomóc obywatelom. Wysokopoziomowy model wykonaj w oparciu o diagram ER
+następnie dokonaj transformacji do modelu relacyjnego. Złożoność modelowania na
+poziomie 8-10 encji.
