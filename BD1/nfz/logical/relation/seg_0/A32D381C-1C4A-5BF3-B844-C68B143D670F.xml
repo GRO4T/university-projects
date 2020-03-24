@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="pacjenci_dokumenty" directorySegmentName="seg_0" id="A32D381C-1C4A-5BF3-B844-C68B143D670F">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-24 21:26:25 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<identifying>false</identifying>
+<nameOnSource>posiada</nameOnSource>
+<nameOnTarget>należy do</nameOnTarget>
+<optionalSource>false</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>C0AF5979-2AA6-73F3-4A02-9085EF7C52C1</sourceEntity>
+<targetCardinalityString>1</targetCardinalityString>
+<targetEntity>8B1A8B14-461D-E114-A343-9A4025D0201A</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
