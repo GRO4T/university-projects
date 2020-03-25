@@ -14,4 +14,96 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pacjenta" id="AAE1ADB4-75DD-65DE-1B1A-04688B84D7E9">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:03:32 UTC</createdTime>
+<generatorID>18FC673D-3069-50CA-9425-C2DFC43A345D</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>51CEE8E7-A53B-5B4D-2A04-616DE4F127DA</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr PESEL" id="1004CA83-AEB7-55E3-76B8-97A410283FA6">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:07:56 UTC</createdTime>
+<generatorID>18FC673D-3069-50CA-9425-C2DFC43A345D</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>0AB1B7DD-A997-0113-99D0-3D507CC373DF</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_lekarza" id="1B2274C0-1F26-A66C-EE43-6EF304DB88B4">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:16:42 UTC</createdTime>
+<generatorID>E826135B-FA9A-E57C-5DFA-B2FE857EE575</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>21BAE82B-E866-1CE0-BF04-BD2D7925408C</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_skierowania" id="F0026CFB-0A6C-555C-39DA-F3AE97C66BCB">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:18:57 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="treść" id="FD54164B-8CB1-5876-4AB9-E0870C5D2DD3">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:19:03 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_wypisania" id="9644C214-BE79-72DC-522C-7C83E48E9078">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:23:10 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="podpis_wypisującego" id="725B8C1D-922F-EC78-A0C7-285B7D2722DD">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:23:19 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="98E55740-8CC6-4AF3-E9AB-81A4FE2C88CD" name="Skierowania na badania lekarskie PK">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:19:02 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>F0026CFB-0A6C-555C-39DA-F3AE97C66BCB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

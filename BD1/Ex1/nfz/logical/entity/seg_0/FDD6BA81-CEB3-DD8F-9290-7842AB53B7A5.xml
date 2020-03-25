@@ -14,4 +14,72 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_lekarza" id="21BAE82B-E866-1CE0-BF04-BD2D7925408C">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:16:08 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="imię" id="21FC60CF-7E1E-5380-71DF-D53F6125FE19">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:16:14 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwisko" id="C8F09B81-4D4B-C68B-6A73-7815A2FADACA">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:16:19 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="specjalizacja" id="23FB8835-5A1E-522D-4FAD-E7B96026DC8F">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:16:23 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa_przychodni" id="E2BBEFDF-02AF-6570-650C-F115CAB10B77">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:27:26 UTC</createdTime>
+<generatorID>958EBFE9-966C-A77A-EB93-BBE2F6FEBF38</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>1FB44E5F-CF80-C404-636A-4DC237300D14</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="F2045E0A-AE8D-6DC4-7FAE-4488D0EBAEE8" name="Lekarze PK">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:16:12 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>21BAE82B-E866-1CE0-BF04-BD2D7925408C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

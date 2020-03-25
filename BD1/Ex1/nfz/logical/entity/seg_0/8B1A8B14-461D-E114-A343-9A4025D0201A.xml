@@ -14,4 +14,75 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_pacjenta" id="221262AE-9D87-C3BF-3029-5F955DB2A309">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:03:32 UTC</createdTime>
+<generatorID>A32D381C-1C4A-5BF3-B844-C68B143D670F</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>51CEE8E7-A53B-5B4D-2A04-616DE4F127DA</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr PESEL" id="A88CC3D3-6FF1-B0E7-A682-BF3F9169D288">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:07:56 UTC</createdTime>
+<generatorID>A32D381C-1C4A-5BF3-B844-C68B143D670F</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>0AB1B7DD-A997-0113-99D0-3D507CC373DF</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa_dokumentu" id="E292AB79-4E75-BFC5-A14F-1022665285D3">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:14:49 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="numer_dokumentu" id="01C55AD8-CE8D-5014-82E8-F14BD6C9D3D4">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:15:02 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="organ_wydający" id="2DA65795-061E-1824-FCE9-C8AD365EDF42">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:15:08 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="370F5B08-F64B-6AC0-FED0-DC755641E589" name="Dokumenty potwierdzajace uprawnienia do świadczeń NFZ PK">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:15:01 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E292AB79-4E75-BFC5-A14F-1022665285D3</attributeRef>
+<attributeRef>01C55AD8-CE8D-5014-82E8-F14BD6C9D3D4</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

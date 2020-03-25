@@ -14,4 +14,61 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_choroby" id="912319A9-D599-4F3C-2653-9723706A0621">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:10:32 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa_choroby" id="179E0D32-1779-466C-83B0-642387DF978F">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:12:35 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_wystąpienia_choroby" id="884A8D89-D95D-08D9-646E-4124E6C3B99D">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:12:43 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_wyzdrowienia" id="37A9A626-235B-5C58-38F7-1009DB32AEBD">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:12:59 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7E9DEFA1-3807-6F31-ABE2-D5ACC2855D44" name="Przebyte choroby PK">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:12:32 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>912319A9-D599-4F3C-2653-9723706A0621</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>

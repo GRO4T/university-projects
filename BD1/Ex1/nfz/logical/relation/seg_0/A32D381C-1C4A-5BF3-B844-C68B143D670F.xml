@@ -6,6 +6,8 @@
 <engineerTo>
 <item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
 </engineerTo>
+<sourcePk>31FFFCC4-791A-1A1A-1EA2-AB08F94AEFDB</sourcePk>
+<targetPk>370F5B08-F64B-6AC0-FED0-DC755641E589</targetPk>
 <identifying>false</identifying>
 <nameOnSource>posiada</nameOnSource>
 <nameOnTarget>należy do</nameOnTarget>

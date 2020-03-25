@@ -14,4 +14,50 @@
 <maxVolumes>9999999</maxVolumes>
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_szczepienia" id="B6EB1EC9-9148-717A-AC87-B7D8BCABC9AD">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:17:37 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nazwa_choroby" id="1830D402-4836-75A1-8C37-6D859D0FBD88">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:17:49 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="data_szczepienia" id="3B119424-7165-3B3B-F2D8-3CB4D2D62A0C">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:17:55 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B3801720-3602-F613-03AD-09BD2126F361" name="Szczepienia PK">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-25 15:18:06 UTC</createdTime>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B6EB1EC9-9148-717A-AC87-B7D8BCABC9AD</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
 </Entity>
