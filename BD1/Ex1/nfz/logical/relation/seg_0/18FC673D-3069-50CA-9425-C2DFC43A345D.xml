@@ -9,8 +9,8 @@
 <sourcePk>31FFFCC4-791A-1A1A-1EA2-AB08F94AEFDB</sourcePk>
 <identifying>false</identifying>
 <nameOnSource>posiada</nameOnSource>
-<nameOnTarget>zostało wypisane dla</nameOnTarget>
-<optionalSource>false</optionalSource>
+<nameOnTarget>zostalo wypisane dla</nameOnTarget>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>C0AF5979-2AA6-73F3-4A02-9085EF7C52C1</sourceEntity>

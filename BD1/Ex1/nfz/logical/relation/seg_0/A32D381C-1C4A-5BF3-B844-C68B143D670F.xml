@@ -10,8 +10,8 @@
 <targetPk>370F5B08-F64B-6AC0-FED0-DC755641E589</targetPk>
 <identifying>false</identifying>
 <nameOnSource>posiada</nameOnSource>
-<nameOnTarget>należy do</nameOnTarget>
-<optionalSource>false</optionalSource>
+<nameOnTarget>poswiadcza o prawie do swiadczenia</nameOnTarget>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>C0AF5979-2AA6-73F3-4A02-9085EF7C52C1</sourceEntity>

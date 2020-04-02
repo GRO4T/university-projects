@@ -6,12 +6,13 @@
 <engineerTo>
 <item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
 </engineerTo>
+<sourcePk>31FFFCC4-791A-1A1A-1EA2-AB08F94AEFDB</sourcePk>
 <identifying>false</identifying>
-<nameOnSource>odbył</nameOnSource>
+<nameOnSource>odbyl</nameOnSource>
 <nameOnTarget>wykonano</nameOnTarget>
-<optionalSource>false</optionalSource>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
-<sourceCardinality>*</sourceCardinality>
+<sourceCardinality>1</sourceCardinality>
 <sourceEntity>C0AF5979-2AA6-73F3-4A02-9085EF7C52C1</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>60DF7BF3-D4B6-9822-BDBE-26720F85A62D</targetEntity>

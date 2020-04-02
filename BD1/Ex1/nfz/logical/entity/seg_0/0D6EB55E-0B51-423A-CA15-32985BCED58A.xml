@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0D6EB55E-0B51-423A-CA15-32985BCED58A" name="Skierowania na badania lekarskie">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="0D6EB55E-0B51-423A-CA15-32985BCED58A" name="Skierowanie">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-24 20:47:23 UTC</createdTime>
 <ownerDesignName>nfz</ownerDesignName>
@@ -27,7 +27,7 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="nr PESEL" id="1004CA83-AEB7-55E3-76B8-97A410283FA6">
+<Attribute name="nr_PESEL" id="1004CA83-AEB7-55E3-76B8-97A410283FA6">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-25 15:07:56 UTC</createdTime>
 <generatorID>18FC673D-3069-50CA-9425-C2DFC43A345D</generatorID>
@@ -61,7 +61,7 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="treść" id="FD54164B-8CB1-5876-4AB9-E0870C5D2DD3">
+<Attribute name="tresc" id="FD54164B-8CB1-5876-4AB9-E0870C5D2DD3">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-25 15:19:03 UTC</createdTime>
 <ownerDesignName>nfz</ownerDesignName>
@@ -81,7 +81,7 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="podpis_wypisującego" id="725B8C1D-922F-EC78-A0C7-285B7D2722DD">
+<Attribute name="podpis_wypisujacego" id="725B8C1D-922F-EC78-A0C7-285B7D2722DD">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-25 15:23:19 UTC</createdTime>
 <ownerDesignName>nfz</ownerDesignName>

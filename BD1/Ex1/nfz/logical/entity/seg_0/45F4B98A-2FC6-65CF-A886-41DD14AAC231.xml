@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="45F4B98A-2FC6-65CF-A886-41DD14AAC231" name="Oddziały NFZ">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="45F4B98A-2FC6-65CF-A886-41DD14AAC231" name="Oddzial NFZ">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-24 19:13:44 UTC</createdTime>
 <ownerDesignName>nfz</ownerDesignName>
@@ -15,7 +15,7 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="nazwa_przychodni" id="1FB44E5F-CF80-C404-636A-4DC237300D14">
+<Attribute name="nazwa_oddzialu" id="1FB44E5F-CF80-C404-636A-4DC237300D14">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-24 19:14:02 UTC</createdTime>
 <ownerDesignName>nfz</ownerDesignName>

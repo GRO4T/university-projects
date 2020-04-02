@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DDD1FA6B-A429-0DC4-F9BE-95677D6AB792" name="Przebyte choroby">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="DDD1FA6B-A429-0DC4-F9BE-95677D6AB792" name="Przebyta choroba">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-24 20:58:04 UTC</createdTime>
 <ownerDesignName>nfz</ownerDesignName>
@@ -35,7 +35,7 @@
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="data_wystąpienia_choroby" id="884A8D89-D95D-08D9-646E-4124E6C3B99D">
+<Attribute name="data_wystapienia_choroby" id="884A8D89-D95D-08D9-646E-4124E6C3B99D">
 <createdBy>DamianPC</createdBy>
 <createdTime>2020-03-25 15:12:43 UTC</createdTime>
 <ownerDesignName>nfz</ownerDesignName>
@@ -53,6 +53,30 @@
 <item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
 </engineerTo>
 <nullsAllowed>true</nullsAllowed>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_pacjenta" id="BBB35048-DD62-1FE9-7B17-9F0094E99595">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-27 11:41:37 UTC</createdTime>
+<generatorID>AD07D7FC-7B15-9685-091F-4BD712D623B2</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>51CEE8E7-A53B-5B4D-2A04-616DE4F127DA</referedAttribute>
+<use>0</use>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nr_PESEL" id="E7655A58-8D7B-D8BE-FEEC-D2FCAE2B796A">
+<createdBy>DamianPC</createdBy>
+<createdTime>2020-03-27 11:41:37 UTC</createdTime>
+<generatorID>AD07D7FC-7B15-9685-091F-4BD712D623B2</generatorID>
+<ownerDesignName>nfz</ownerDesignName>
+<engineerTo>
+<item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
+</engineerTo>
+<referedAttribute>0AB1B7DD-A997-0113-99D0-3D507CC373DF</referedAttribute>
 <use>0</use>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>

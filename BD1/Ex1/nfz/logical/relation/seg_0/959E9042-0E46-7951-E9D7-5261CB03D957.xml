@@ -10,8 +10,8 @@
 <identifying>false</identifying>
 <nameOnSource>jest przypisany do</nameOnSource>
 <nameOnTarget>jest przypisany do</nameOnTarget>
-<optionalSource>false</optionalSource>
-<optionalTarget>false</optionalTarget>
+<optionalSource>true</optionalSource>
+<optionalTarget>true</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>FDD6BA81-CEB3-DD8F-9290-7842AB53B7A5</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>

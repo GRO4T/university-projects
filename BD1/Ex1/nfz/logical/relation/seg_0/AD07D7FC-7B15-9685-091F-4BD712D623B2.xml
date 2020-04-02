@@ -6,12 +6,14 @@
 <engineerTo>
 <item key="5748F7A3-FCFA-96BD-B1C5-1BB23A2E9192" value="true"/>
 </engineerTo>
+<sourcePk>31FFFCC4-791A-1A1A-1EA2-AB08F94AEFDB</sourcePk>
+<targetPk>7E9DEFA1-3807-6F31-ABE2-D5ACC2855D44</targetPk>
 <identifying>false</identifying>
-<nameOnSource>przebył</nameOnSource>
+<nameOnSource>przebyl</nameOnSource>
 <nameOnTarget>przebyta</nameOnTarget>
-<optionalSource>false</optionalSource>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
-<sourceCardinality>*</sourceCardinality>
+<sourceCardinality>1</sourceCardinality>
 <sourceEntity>C0AF5979-2AA6-73F3-4A02-9085EF7C52C1</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>DDD1FA6B-A429-0DC4-F9BE-95677D6AB792</targetEntity>

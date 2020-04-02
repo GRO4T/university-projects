@@ -9,8 +9,8 @@
 <sourcePk>2AAC387E-2918-2C6A-314D-BD1679C41C87</sourcePk>
 <identifying>false</identifying>
 <nameOnSource>leczy</nameOnSource>
-<nameOnTarget>należy do</nameOnTarget>
-<optionalSource>false</optionalSource>
+<nameOnTarget>nalezy do</nameOnTarget>
+<optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
 <sourceEntity>45F4B98A-2FC6-65CF-A886-41DD14AAC231</sourceEntity>
