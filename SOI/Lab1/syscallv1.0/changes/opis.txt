@@ -1,0 +1,7 @@
+1. Struktura rozwiązania
+	- usr/ - zmodyfikowane pliki jądra
+	- test/ - funkcja testująca
+2. Opis rozwiązania
+	- zmodyfikowany kod starałem się komentować tagiem <modified>, żeby umożliwić wyszukiwanie grepem
+	- definicja funkcji znajduje się na końcu pliku /usr/src/mm/main.c
+	- indeks_w_tablicy_syscalli = 49
