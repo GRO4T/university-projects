@@ -4,6 +4,7 @@
 ```
 mount -t minix -o loop,offset=1483776 minix203.img.cur minix_usr
 ```
+**This mounts only usr/ directory! (no root/)**
 
 ## Lab 1 - writing custom syscall
 
