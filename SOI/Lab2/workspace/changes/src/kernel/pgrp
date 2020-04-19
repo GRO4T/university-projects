@@ -1,0 +1,5 @@
+console.c:		if ((cons->c_tty->tty_termios.c_oflag & (OPOST|ONLCR))
+rs232.c:	rs->tty->tty_events = 1;
+rs232.c:	rs->tty->tty_events = 1;
+rs232.c:		rs->tty->tty_events = 1;
+rs232.c:		rs->tty->tty_events = 1;
