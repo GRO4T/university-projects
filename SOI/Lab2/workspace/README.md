@@ -1,12 +1,12 @@
 # Opis rozwiązania
-Na potrzeby zadania stworzyłem trzy dodatkowe kolejki procesów (ONE_Q, TWO_Q, THREE_Q). Korzystam jednak wciąż z kolejki procesów klasy USER. Wynika to z tego, że próbując natknąłem się na błąd, który polegał na tym, że kolejka ONE_Q pozostawała jednoelementowa przez cały czas wykonania programu. Przy czym nie dochodziło do zakleszczenia po skończeniu pracy przez obecnie wykonynywany proces. A po prostu były one wykonywane jeden po drugim. Po wielu godzinach debugowania stwierdziłem, że bezpieczniej będzie wykorzystać kolejkę USERi_Q.
+Na potrzeby zadania stworzyłem trzy dodatkowe kolejki procesów (ONE_Q, TWO_Q, THREE_Q). Korzystam jednak wciąż z kolejki procesów klasy USER. Wynika to z tego, że próbując natknąłem się na błąd, który polegał na tym, że kolejka ONE_Q pozostawała jednoelementowa przez cały czas wykonania programu. Przy czym nie dochodziło do zakleszczenia po skończeniu pracy przez obecnie wykonynywany proces. A po prostu były one wykonywane jeden po drugim. Po wielu godzinach debugowania stwierdziłem, że bezpieczniej będzie wykorzystać kolejkę USER_Q.
 
 ## Szczegóły
 Na potrzeby implementacji zdefiniowałem 2 wywołania systemowe setpri oraz getpri pozwalające mi ustawiać oraz odczytywać parametry procesów.
 Do wywołania ich z poziomu mikrojądra użyłem modułu MM.
 W pliku proc.h zdefiniowałem te parametry oraz inne przydatne makra. Większość zmodyfikowanych elementów programu jest oznaczonych tagiem <modified>.
 ### Objaśnienie podstawowych parametrów
-* act_pri - aktualny priorytet w szeregowaniu ze starzeniem. Deklarowany czas wykonania programu w szeregowaniu FJF.
+* act_pri - aktualny priorytet w szeregowaniu ze starzeniem. Deklarowany czas wykonania programu w szeregowaniu SJF.
 * prev_act_pri - poprzednia wartość aktualnego priorytetu. Parametr stworzony tylko i wyłącznie w celu prezentacji działania szeregowania ze starzeniem.
 * base_pri - priorytet bazowy w szeregowaniu ze starzeniem.
 * ptype - typ procesu. Może przyjmować wartości całkowite od 1 do 3. Wartość dla procesu init to 1.
@@ -27,4 +27,4 @@ Analogicznie do 2 z tym, że szukamy minimum.
 ## Testowanie
 W katalogu include znajduje się plik scheduling.h zawierający funkcje pomocnicze do wywołań systemowych.
 Testy znajdują się w katalogu lab2. Używają one programu test.out, który pozwala na ustawienie parametrów procesu oraz manipulowanie czasem wykonania.
-Testy wywoływane są przy użycia komendy make, np. make test1.
+Testy wywoływane są przy użycia komendy make, np. make test1
