@@ -11,6 +11,8 @@ union semun{
 typedef struct Semaphore{
     int start_value;
     int semid;
+
+    union semun argument;
 } Semaphore;
 
 int Semaphore__alloc(Semaphore * self, key_t key, int sem_flags){
@@ -24,11 +26,10 @@ int Semaphore__dealloc(Semaphore * self){
 }
 
 int Semaphore__init(Semaphore * self){
-    union semun argument;
     unsigned short values[1];
     values[0] = self->start_value;
-    argument.array = values;
-    return semctl(self->semid, 0, SETALL, argument);
+    self->argument.array = values;
+    return semctl(self->semid, 0, SETALL, self->argument);
 }
 
 void Semaphore__create(Semaphore * self, int _start_value){

@@ -1,8 +1,12 @@
+#include <sys/types.h>
+#include <sys/ipc.h>
+#include <sys/sem.h>
+#include <sys/shm.h>
+#include <sys/wait.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-
-#include "buffer.h"
+#include <semaphore.h>
 
 sem_t * bind_sem(){
     static int shm_id = 0;
@@ -18,8 +22,8 @@ sem_t * bind_sem(){
 }
 
 int main(){
-    Buffer * buf = Buffer__bind();
-    Buffer__init(buf);
+    sem_t * semaphore = bind_sem();
+    sem_init(semaphore, 1, 1);
     
     pid_t child_pid = fork();
     if (child_pid != 0)
@@ -27,10 +31,10 @@ int main(){
     pid_t my_pid = getpid();
     if (child_pid == (0)){
         for (int i = 0; i < 2; ++i){
-            printf("%d put\n", my_pid);
-            Buffer__put(buf, my_pid);
-            int val = Buffer__get(buf);
-            printf("%d get, value = %d\n", my_pid, val);
+            printf("%d lock mutex\n", my_pid);
+            sem_wait(semaphore);
+            sem_post(semaphore);
+            printf("%d unlock mutex\n", my_pid);
         }
         exit(0);
     }
