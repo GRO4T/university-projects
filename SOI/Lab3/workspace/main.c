@@ -65,6 +65,7 @@ int main(){
     Proc_factory * proc_factory = Proc_factory__bind();
     Proc_factory__init(proc_factory);
     
+    Proc_factory__spawn_b2(proc_factory, buf);
     Proc_factory__spawn_a1(proc_factory, buf);
     Proc_factory__spawn_a2(proc_factory, buf);
     Proc_factory__spawn_b1(proc_factory, buf);

@@ -140,4 +140,14 @@ int Buffer__get_num_odd(Buffer * self){
     return temp;
 }
 
+int Buffer__print(Buffer * self){
+    sem_wait(&self->buf_sem);
+    printf("[");
+    for (int i = self->headId; i <= self->tailId; ++i){
+        printf("%d, ", self->data[i]);
+    }
+    printf("]\n");
+    sem_post(&self->buf_sem);
+}
+
 #endif

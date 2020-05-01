@@ -1,7 +1,8 @@
 #ifndef PROC_FACTORY_H
 #define PROC_FACTORY_H
-
 #include "buffer.h"
+#include <unistd.h>
+#include <assert.h>
 
 #define N_PROCS 4
 #define A1 0
@@ -64,12 +65,12 @@ void Proc_factory__init(Proc_factory * self){
     sem_init(&self->condition[A1], 1, 10);
     sem_init(&self->condition[A2], 1, 0);
     sem_init(&self->condition[B1], 1, 0);
-    sem_init(&self->condition[B1], 1, 0);
+    sem_init(&self->condition[B2], 1, 0);
 
     sem_init(&self->fill_count, 1, 0);
     sem_init(&self->empty_count, 1, M);
 
-    sem_init(&self->even, 1, 1);
+    sem_init(&self->even, 1, 0);
     sem_init(&self->odd, 1, 0);
     sem_init(&self->mutex_lock, 1, 1);
 
@@ -97,21 +98,32 @@ void post_if_zero(sem_t * sem){
 void Proc_factory__spawn_a1(Proc_factory * self, Buffer * buf){
     pid_t pid = fork();
     if (pid == 0){
-        for (int i = 0; i < 4; ++i){
+        while(1){
+            usleep(500000);
             sem_wait(&self->empty_count);
             sem_wait(&self->condition[A1]);
+
             sem_wait(&self->mutex_lock);
+
             int val = Proc_factory__get_a1_next_val(self);
             Buffer__put(buf, val);
-            printf("A1 puts %d\n", val);
+            printf("A1 puts %d\t", val);
+            Buffer__print(buf);
+
+            if (Buffer__get_num_even(buf) > Buffer__get_num_odd(buf))
+                sem_post(&self->condition[A2]);
+
+            if (Buffer__get_size(buf) >= 7)
+                sem_post(&self->condition[B2]);
 
             if (Buffer__get_size(buf) >= 3){
                 sem_post(&self->condition[B1]);
             }
-            post_if_zero(&self->even);
-            wait_not_zero(&self->odd);
-            if (Buffer__get_num_even(buf) > Buffer__get_num_odd(buf))
-                sem_post(&self->condition[A2]);
+
+            if (Buffer__get_size(buf) == 1){
+                post_if_zero(&self->even);
+                wait_not_zero(&self->odd);
+            }
 
             sem_post(&self->mutex_lock);
             sem_post(&self->fill_count);
@@ -123,22 +135,30 @@ void Proc_factory__spawn_a1(Proc_factory * self, Buffer * buf){
 void Proc_factory__spawn_a2(Proc_factory * self, Buffer * buf){
     pid_t pid = fork();
     if (pid == 0){
-        for (int i = 0; i < 5; ++i){
+        while(1){
+            usleep(500000);
             sem_wait(&self->empty_count);
             sem_wait(&self->condition[A2]);
 
             sem_wait(&self->mutex_lock);
 
-            wait_not_zero(&self->condition[A1]);
-
             int val = Proc_factory__get_a2_next_val(self);
             Buffer__put(buf, val);
-            printf("A2 puts %d\n", val);
+            printf("A2 puts %d\t", val);
+            Buffer__print(buf);
+
+            wait_not_zero(&self->condition[A1]);
+
+            if (Buffer__get_size(buf) >= 7)
+                sem_post(&self->condition[B2]);
 
             if (Buffer__get_size(buf) >= 3)
                 sem_post(&self->condition[B1]);
-            post_if_zero(&self->odd);
-            wait_not_zero(&self->even);
+            
+            if (Buffer__get_size(buf) == 1){
+               post_if_zero(&self->odd);
+               wait_not_zero(&self->even);
+            }
 
             sem_post(&self->mutex_lock);
             sem_post(&self->fill_count);
@@ -150,30 +170,72 @@ void Proc_factory__spawn_a2(Proc_factory * self, Buffer * buf){
 void Proc_factory__spawn_b1(Proc_factory * self, Buffer * buf){
     pid_t pid = fork();
     if (pid == 0){
-        for (int i = 0; i < 5; ++i){
+        while(1) {
+            usleep(500000);
             sem_wait(&self->fill_count);
             sem_wait(&self->condition[B1]);
             sem_wait(&self->even);
 
             sem_wait(&self->mutex_lock);
-
+            
             int val = Buffer__pop(buf);
-            printf("B1 pops %d\n", val);
+            assert(val % 2 ==0 );
+            printf("B1 pops %d\t", val);
+            Buffer__print(buf);
+
             int cur_val = Buffer__peek(buf);
-            printf("val %d\n", cur_val);
             if (cur_val % 2 == 0){
-                printf("even");
                 post_if_zero(&self->even);
                 wait_not_zero(&self->odd);
                 wait_not_zero(&self->condition[A2]);
             }
             else{
-                printf("odd");
                 post_if_zero(&self->odd);
                 wait_not_zero(&self->even);
                 if (Buffer__get_num_even(buf) > Buffer__get_num_odd(buf))
                     sem_post(&self->condition[A2]);
             }
+
+            wait_not_zero(&self->condition[B2]);
+
+            if (Buffer__get_size(buf) < 10)
+                sem_post(&self->condition[A1]);
+
+            sem_post(&self->mutex_lock);
+            sem_post(&self->empty_count);
+        }
+        exit(0);
+    }
+}
+
+void Proc_factory__spawn_b2(Proc_factory * self, Buffer * buf){
+    pid_t pid = fork();
+    if (pid == 0){
+        while(1){
+            usleep(500000);
+            sem_wait(&self->fill_count);
+            sem_wait(&self->condition[B2]);
+            sem_wait(&self->odd);
+
+            sem_wait(&self->mutex_lock);
+
+            int val = Buffer__pop(buf);
+            printf("B2 pops %d\t", val);
+            Buffer__print(buf);
+            int cur_val = Buffer__peek(buf);
+            if (cur_val % 2 == 0){
+                post_if_zero(&self->even);
+                wait_not_zero(&self->odd);
+                wait_not_zero(&self->condition[A2]);
+            }
+            else{
+                post_if_zero(&self->odd);
+                wait_not_zero(&self->even);
+                if (Buffer__get_num_even(buf) > Buffer__get_num_odd(buf))
+                    sem_post(&self->condition[A2]);
+            }
+
+            wait_not_zero(&self->condition[B1]);
 
             if (Buffer__get_size(buf) < 10)
                 sem_post(&self->condition[A1]);
