@@ -21,7 +21,5 @@ int main(){
     Proc_factory__spawn_proc(proc_factory, buf, B1);
     Proc_factory__spawn_proc(proc_factory, buf, B1);
 
-    getchar();
-
     while (wait(NULL) > 0);
 }
