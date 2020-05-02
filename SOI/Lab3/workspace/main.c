@@ -11,7 +11,7 @@ int main(){
 
     Proc_factory * proc_factory = Proc_factory__bind();
     Proc_factory__init(proc_factory);
-    
+
     Proc_factory__spawn_proc(proc_factory, buf, A1);
     Proc_factory__spawn_proc(proc_factory, buf, A1);
     Proc_factory__spawn_proc(proc_factory, buf, A2);
