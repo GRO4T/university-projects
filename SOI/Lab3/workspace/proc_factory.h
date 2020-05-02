@@ -9,7 +9,7 @@
 #define B1 2
 #define B2 3
 
-#define SLEEPTIME 500000
+#define SLEEPTIME 0
 
 typedef struct Proc_factory{
     sem_t condition[N_PROCS];
