@@ -2,15 +2,11 @@
 #define BUFFER_H
 
 #include <sys/types.h>
-#include <sys/ipc.h>
-#include <sys/sem.h>
 #include <sys/shm.h>
-#include <sys/wait.h>
 #include <semaphore.h>
 #include <limits.h>
 
 #define M 100
-
 
 typedef struct Buffer{
     sem_t buf_sem;
@@ -24,9 +20,6 @@ typedef struct Buffer{
     int num_even;
     int num_odd;
 } Buffer;
-
-int Buffer__is_full(Buffer * self);
-int Buffer__is_empty(Buffer * self);
 
 Buffer * Buffer__bind(){
     static int shm_id = 0;
@@ -108,22 +101,6 @@ int Buffer__get_size(Buffer * self){
     return temp;
 }
 
-int Buffer__is_full(Buffer * self){
-    int temp;
-    sem_wait(&self->buf_sem);
-    temp = self->size == M;
-    sem_post(&self->buf_sem);
-    return temp;
-}
-
-int Buffer__is_empty(Buffer * self){
-    int temp;
-    sem_wait(&self->buf_sem);
-    temp = self->size == 0;
-    sem_post(&self->buf_sem);
-    return temp;
-}
-
 int Buffer__get_num_even(Buffer * self){
     int temp;
     sem_wait(&self->buf_sem);
@@ -143,9 +120,10 @@ int Buffer__get_num_odd(Buffer * self){
 int Buffer__print(Buffer * self){
     sem_wait(&self->buf_sem);
     printf("[");
-    for (int i = self->headId; i <= self->tailId; ++i){
+    for (int i = self->headId; i != self->tailId; i = (i + 1)%M){
         printf("%d, ", self->data[i]);
     }
+    printf("%d, ", self->data[self->tailId]);
     printf("]\n");
     sem_post(&self->buf_sem);
 }
