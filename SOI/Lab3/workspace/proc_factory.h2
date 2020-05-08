@@ -9,12 +9,10 @@
 #define B1 2
 #define B2 3
 
-#define SLEEPTIME 500000
+#define SLEEPTIME 0
 
 typedef struct Proc_factory{
     sem_t condition[N_PROCS];
-
-    sem_t mutex;
 
     sem_t even;
     sem_t odd;
@@ -57,7 +55,7 @@ Proc_factory * Proc_factory__bind(){
 }
 
 void Proc_factory__init(Proc_factory * self){
-    sem_init(&self->condition[A1], 1, 10);
+    sem_init(&self->condition[A1], 1, 0);
     sem_init(&self->condition[A2], 1, 0);
     sem_init(&self->condition[B1], 1, 0);
     sem_init(&self->condition[B2], 1, 0);
@@ -70,21 +68,18 @@ void Proc_factory__init(Proc_factory * self){
 
     self->a1_next_val = -2;
     self->a2_next_val = -1;
-
-    sem_init(&self->mutex, 1, 1);
 }
 
 void _Proc_factory__A1_job(Proc_factory * self, Buffer * buf){
     while(1){
         usleep(SLEEPTIME);
-        sem_wait(&self->condition[A1]);
+        while (Buffer__get_size(buf) >= 10)
+            sem_wait(&self->condition[A1]);
 
-        sem_wait(&self->mutex);
         int val = _Proc_factory__get_a1_next_val(self);
         Buffer__put(buf, val);
         printf("A1 puts %d\t", val);
         Buffer__print(buf);
-        sem_post(&self->mutex);
 
         if (Buffer__get_num_even(buf) > Buffer__get_num_odd(buf))
             sem_post(&self->condition[A2]);
@@ -104,14 +99,13 @@ void _Proc_factory__A1_job(Proc_factory * self, Buffer * buf){
 void _Proc_factory__A2_job(Proc_factory * self, Buffer * buf){
     while(1){
         usleep(SLEEPTIME);
-        sem_wait(&self->condition[A2]);
+        while (Buffer__get_num_even(buf) <= Buffer__get_num_odd(buf))
+            sem_wait(&self->condition[A2]);
 
-        sem_wait(&self->mutex);
         int val = _Proc_factory__get_a2_next_val(self);
         Buffer__put(buf, val);
         printf("A2 puts %d\t", val);
         Buffer__print(buf);
-        sem_post(&self->mutex);
 
         if (Buffer__get_size(buf) >= 7)
             sem_post(&self->condition[B2]);
@@ -130,13 +124,12 @@ void _Proc_factory__B1_job(Proc_factory * self, Buffer * buf){
         usleep(SLEEPTIME);
         while (Buffer__peek(buf) % 2 != 0)
             sem_wait(&self->even);
-        sem_wait(&self->condition[B1]);
+        while (Buffer__get_size(buf) < 3)
+            sem_wait(&self->condition[B1]);
 
-        sem_wait(&self->mutex);
         int val = Buffer__pop(buf);
         printf("B1 pops %d\t", val);
         Buffer__print(buf);
-        sem_post(&self->mutex);
 
         int cur_val = Buffer__peek(buf);
         if (cur_val % 2 == 0){
@@ -158,13 +151,12 @@ void _Proc_factory__B2_job(Proc_factory * self, Buffer * buf){
         usleep(SLEEPTIME);
         while (Buffer__peek(buf) % 2 == 0)
             sem_wait(&self->odd);
-        sem_wait(&self->condition[B2]);
+        while (Buffer__get_size(buf) < 7)
+            sem_wait(&self->condition[B2]);
 
-        sem_wait(&self->mutex);
         int val = Buffer__pop(buf);
         printf("B2 pops %d\t", val);
         Buffer__print(buf);
-        sem_post(&self->mutex);
 
         int cur_val = Buffer__peek(buf);
         if (cur_val % 2 == 0){

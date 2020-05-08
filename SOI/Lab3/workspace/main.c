@@ -14,11 +14,11 @@ int main(){
 
     Proc_factory__spawn_proc(proc_factory, buf, A1);
     Proc_factory__spawn_proc(proc_factory, buf, A1);
+    Proc_factory__spawn_proc(proc_factory, buf, A1);
+    Proc_factory__spawn_proc(proc_factory, buf, A2);
     Proc_factory__spawn_proc(proc_factory, buf, A2);
     Proc_factory__spawn_proc(proc_factory, buf, A2);
     Proc_factory__spawn_proc(proc_factory, buf, B2);
-    Proc_factory__spawn_proc(proc_factory, buf, B2);
-    Proc_factory__spawn_proc(proc_factory, buf, B1);
     Proc_factory__spawn_proc(proc_factory, buf, B1);
 
     while (wait(NULL) > 0);

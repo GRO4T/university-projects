@@ -1,0 +1,3 @@
+compile:
+
+java -cp ./*: JavaAppJDBC
