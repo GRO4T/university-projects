@@ -2,12 +2,12 @@
 
 #include "thread_monitor.h"
 
-#define A1_COUNT 5
-#define B1_COUNT 5
-#define A2_COUNT 5
-#define B2_COUNT 5
-
 #define SLEEPTIME 0
+
+int a1_count = 5;
+int b1_count = 5;
+int a2_count = 5;
+int b2_count = 5;
 
 Buffer buffer;
 ThreadMonitor threadMonitor(buffer);
@@ -17,26 +17,37 @@ void * b1Consumer(void * nr);
 void * a2Producer(void * nr);
 void * b2Consumer(void * nr);
 
-int main()
+int main(int argc, char * argv[])
 {
+    if (argc != 1 && argc != 5){
+        printf("Usage:\tprogram_name [a1_count b1_count a2_count b2_count]");
+        return -1;
+    }
+    else if (argc == 5){
+        a1_count = atoi(argv[1]);
+        b1_count = atoi(argv[2]);
+        a2_count = atoi(argv[3]);
+        b2_count = atoi(argv[4]);
+    }
+
 	int i;
-	pthread_t tid[A1_COUNT + B1_COUNT];
+	pthread_t tid[a1_count + b1_count];
 
     //create A1 producers
-	for ( i = 0; i < A1_COUNT; i++)
+	for ( i = 0; i < a1_count; i++)
 		pthread_create(&(tid[i]), NULL, a1Producer, (void*)(intptr_t)i );
     //create B1 consumers
-	for ( i = A1_COUNT; i < A1_COUNT + B1_COUNT; i++)
-		pthread_create(&(tid[i]), NULL, b1Consumer, (void*)(intptr_t)(i-A1_COUNT));
+	for ( i = a1_count; i < a1_count + b1_count; i++)
+		pthread_create(&(tid[i]), NULL, b1Consumer, (void*)(intptr_t)(i-a1_count));
     //create A2 producers
-	for ( i = A1_COUNT + B1_COUNT; i < A1_COUNT + B1_COUNT + A2_COUNT; i++)
-		pthread_create(&(tid[i]), NULL, a2Producer, (void*)(intptr_t)(i-A1_COUNT-B1_COUNT));
+	for ( i = a1_count + b1_count; i < a1_count + b1_count + a2_count; i++)
+		pthread_create(&(tid[i]), NULL, a2Producer, (void*)(intptr_t)(i-a1_count-b1_count));
     //create A2 producers
-	for ( i = A1_COUNT + B1_COUNT + A2_COUNT; i < A1_COUNT + B1_COUNT + A2_COUNT + B2_COUNT; i++)
-		pthread_create(&(tid[i]), NULL, b2Consumer, (void*)(intptr_t)(i-A1_COUNT-B1_COUNT-A2_COUNT));
+	for ( i = a1_count + b1_count + a2_count; i < a1_count + b1_count + a2_count + b2_count; i++)
+		pthread_create(&(tid[i]), NULL, b2Consumer, (void*)(intptr_t)(i-a1_count-b1_count-a2_count));
 
 	//wait for threads termination
-	for ( i = 0; i < A1_COUNT + B1_COUNT + A2_COUNT + B2_COUNT; i++)
+	for ( i = 0; i < a1_count + b1_count + a2_count + b2_count; i++)
 	    pthread_join(tid[i],(void **)NULL);
 
 	return 0;
