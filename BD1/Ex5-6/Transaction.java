@@ -15,10 +15,14 @@ public class Transaction {
 
     public Transaction() throws SQLException {
         this.conn = DriverManager.getConnection(JDBC_URL, JDBC_USER, JDBC_PASS);
+        java.sql.DatabaseMetaData db = conn.getMetaData();
+        if (db.supportsTransactionIsolationLevel(Connection.TRANSACTION_SERIALIZABLE)){
+            conn.setTransactionIsolation(Connection.TRANSACTION_SERIALIZABLE);
+        }
     }
 
     /**
-     * pacjent umarl
+     * usuniecie pacjenta z systemu
      * usunac przebyte choroby, recepty, skierowania, szczepienia
      * a potem usunac pacjenta oraz jego dokumenty
      */
@@ -28,7 +32,6 @@ public class Transaction {
         System.out.printf("pesel pacjenta = ");
         long patientPESEL = scanner.nextLong();
 
-
         PreparedStatement selectPatient = null;
         PreparedStatement deleteDiseaseRecord = null;
         PreparedStatement deleteDoc = null;
@@ -36,8 +39,6 @@ public class Transaction {
         PreparedStatement deletePrescription = null;
         PreparedStatement deleteReferral = null;
         PreparedStatement deleteVaccination = null;
-
-        ResultSet rset = null;
 
         try{
             conn.setAutoCommit(false);
@@ -52,7 +53,7 @@ public class Transaction {
                 );
                 selectPatient.setInt(1, patientID);
                 selectPatient.setLong(2, patientPESEL);
-                rset = selectPatient.executeQuery();
+                ResultSet rset = selectPatient.executeQuery();
                 rset.next();
                 docNumber = rset.getString(1);
             }
@@ -67,7 +68,7 @@ public class Transaction {
             deleteDiseaseRecord.setInt(1, patientID);
             deleteDiseaseRecord.setLong(2, patientPESEL);
             int deleted = deleteDiseaseRecord.executeUpdate();
-            System.out.println(deleted + " rows DELETED from PRZEBYTA_CHOROBA");
+            System.out.println("\t" + deleted + " rows DELETED from PRZEBYTA_CHOROBA");
 
             // usun recepty
             deletePrescription = conn.prepareStatement(
@@ -76,7 +77,7 @@ public class Transaction {
             deletePrescription.setInt(1, patientID);
             deletePrescription.setLong(2, patientPESEL);
             deleted = deletePrescription.executeUpdate();
-            System.out.println(deleted + " rows DELETED from RECEPTA");
+            System.out.println("\t" + deleted + " rows DELETED from RECEPTA");
 
             // usun skierowania
             deleteReferral = conn.prepareStatement(
@@ -85,7 +86,7 @@ public class Transaction {
             deleteReferral.setInt(1, patientID);
             deleteReferral.setLong(2, patientPESEL);
             deleted = deleteReferral.executeUpdate();
-            System.out.println(deleted + " rows DELETED from SKIEROWANIE");
+            System.out.println("\t" + deleted + " rows DELETED from SKIEROWANIE");
 
             // usun szczepionki
             deleteVaccination = conn.prepareStatement(
@@ -94,7 +95,7 @@ public class Transaction {
             deleteVaccination.setInt(1, patientID);
             deleteVaccination.setLong(2, patientPESEL);
             deleted = deleteVaccination.executeUpdate();
-            System.out.println(deleted + " rows DELETED from SZCZEPIENIE");
+            System.out.println("\t" + deleted + " rows DELETED from SZCZEPIENIE");
 
             // ostatecznie, usun pacjenta
             deletePatient = conn.prepareStatement(
@@ -105,7 +106,7 @@ public class Transaction {
             deleted = deletePatient.executeUpdate();
             if (deleted == 0)
                 throw new Exception("No such patient!");
-            System.out.println("PATIENT DELETED");
+            System.out.println("\tPATIENT DELETED");
 
             // jesli pacjent mial taki, usun dokument potwierdzajacy prawo do swiadczen
             if (!docNumber.equals("")){
@@ -114,7 +115,7 @@ public class Transaction {
                 );
                 deleteDoc.setString(1, docNumber);
                 deleteDoc.executeUpdate();
-                System.out.println("DOCUMENT DELETED");
+                System.out.println("\tDOCUMENT DELETED");
             }
 
             conn.commit();
@@ -130,18 +131,13 @@ public class Transaction {
             conn.rollback();
         }
         finally{
-            conn.rollback();
-
             if (selectPatient != null) selectPatient.close();
             if (deleteDiseaseRecord != null) deleteDiseaseRecord.close();
             if (deleteDoc != null) deleteDoc.close();
             if (deletePatient != null) deletePatient.close();
             if (deletePrescription != null) deletePrescription.close();
-            if (deleteReferral != null) deleteReferral.close();
+            if (deleteReferral != null) selectPatient.close();
             if (deleteVaccination != null) deleteVaccination.close();
-
-            if (rset != null) rset.close();
-
             conn.setAutoCommit(true);
             System.out.println("END OF TRANSACTION");
         }
