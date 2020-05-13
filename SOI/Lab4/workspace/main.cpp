@@ -2,7 +2,7 @@
 
 #include "thread_monitor.h"
 
-#define SLEEPTIME 0
+#define SLEEPTIME 500000
 
 int a1_count = 5;
 int b1_count = 5;
