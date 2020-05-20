@@ -1,0 +1,82 @@
+const BUFSIZE = 20;
+
+server semaphore {
+    var state : {up, down};
+
+    { p | state = :up } -> {state = :down}
+    { v } -> {state = :up}
+}
+
+server multi_sem {
+    var value : 0..BUFSIZE;
+
+    { p | value > 0 } -> { value = value - 1 }
+    { v | value < BUFSIZE } -> { value = value + 1 }
+    { v | value = BUFSIZE } -> { ok }
+}
+
+server buf {
+    var even_count : 0..BUFSIZE;
+    var odd_count : 0..BUFSIZE;
+    
+    { put_even | even_count + odd_count < BUFSIZE } -> { even_count = even_count + 1 }
+
+    { remove_even | even_count > 0 } -> { even_count = even_count - 1 }
+
+    { a1_can_continue | even_count + odd_count < 10 } -> { true }
+    { a1_can_continue | even_count + odd_count >= 10 } -> { false }
+    { b1_can_continue | even_count + odd_count >= 3 && even_count > 0 } -> { true }
+    { b1_can_continue | even_count + odd_count < 3 || even_count = 0 } -> { false }
+}
+
+var buf = buf() { even_count = 0, odd_count = 0 };
+var mutex = semaphore() { state = :up };
+var empty_count = multi_sem() { value = BUFSIZE };
+var fill_count = multi_sem() { value = 0 };
+
+var a1_sem = semaphore() { state = :down };
+var b1_sem = semaphore() { state = :down };
+
+process producer_a1() {
+    loop {
+        match buf.a1_can_continue() {
+            :true => skip;
+            :false => a1_sem.p();
+        }
+
+        empty_count.p();
+        mutex.p();
+
+        buf.put_even();
+
+        match buf.b1_can_continue() {
+            :true => b1_sem.v();
+            :false => skip;
+        }
+
+        mutex.v();
+        fill_count.v();
+    }
+}
+
+process consumer_b1() {
+    loop {
+        match buf.b1_can_continue() {
+            :true => skip;
+            :false => b1_sem.p();
+        }
+
+        fill_count.p();
+        mutex.p();
+
+        buf.remove_even();
+
+        match buf.a1_can_continue() {
+            :true => a1_sem.v();
+            :false => skip;
+        }
+
+        mutex.v();
+        empty_count.v();
+    }
+}
