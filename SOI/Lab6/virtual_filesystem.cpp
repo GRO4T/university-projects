@@ -10,7 +10,7 @@ VirtualFilesystem::~VirtualFilesystem(){
 
 void VirtualFilesystem::create(unsigned int size){
     if (size <= SYSTEM_BLOCKS){
-        throw std::runtime_error("Disc too small!");
+        throw DiscTooSmall();
     }
 
     this->size = size;
@@ -83,16 +83,16 @@ void VirtualFilesystem::close(){
   outStream.close();
 }
 
-void VirtualFilesystem::uploadFile(std::string filename){
-    if (findINodeByName(filename) != NULL){
-        throw std::runtime_error("File with given name already exists!");
+void VirtualFilesystem::uploadFile(std::string filename, std::string uploadAs){
+    if (findINode(uploadAs) != NULL || findINode(filename) != NULL){
+        throw FilenameNotUnique();
     }
 
     unsigned int filesize = boost::filesystem::file_size(filename);
     unsigned int blocksNeeded = ((filesize - 1) / BLOCK_SIZE) + 1; // e.g. ((1024-1)/1024)+1 = 1, but ((1025-1)/1024)+1 = 2
     unsigned int blocksFree = size - blocksUsed;
     if (blocksNeeded > blocksFree){
-        throw std::runtime_error("Not enough space!");
+        throw NotEnoughSpace();
     }
 
     unsigned int newFilePos = alloc(blocksNeeded);
@@ -118,14 +118,14 @@ void VirtualFilesystem::uploadFile(std::string filename){
     newINode.firstBlock = newFilePos;
     newINode.size = filesize;
     newINode.blocks = blocksNeeded;
-    strcpy(newINode.name, filename.c_str());
+    strcpy(newINode.name, uploadAs != "" ? uploadAs.c_str() : filename.c_str());
     inodes.push_back(newINode);
 }
 
-void VirtualFilesystem::downloadFile(std::string filename){
-    INode * inode = findINodeByName(filename);
+void VirtualFilesystem::downloadFile(std::string filename, std::string downloadAs = ""){
+    INode * inode = findINode(filename);
     if (inode == NULL){
-        throw std::runtime_error("No such file!");
+        throw FileNotExist();
     }
     
     buffer bufs[inode->blocks];
@@ -139,7 +139,13 @@ void VirtualFilesystem::downloadFile(std::string filename){
 
     std::cout << inode->name << std::endl;
     std::ofstream outStream;
-    outStream.open(inode->name);
+    if (downloadAs != ""){
+        outStream.open(downloadAs);
+    }
+    else{
+        outStream.open(inode->name);
+    }
+
     for (unsigned int i = 0; i < inode->blocks; ++i){
         if (i + 1 < inode->blocks){
             outStream.write(bufs[i], BLOCK_SIZE);
@@ -153,13 +159,22 @@ void VirtualFilesystem::downloadFile(std::string filename){
     outStream.close();
 }
 
-VirtualFilesystem::INode * VirtualFilesystem::findINodeByName(std::string name){
+VirtualFilesystem::INode* VirtualFilesystem::findINode(std::string name){
     for (unsigned int i = 0; i < inodes.size(); ++i){
         if (inodes[i].name == name){
             return &inodes[i];
         }
     }
     return NULL;
+}
+
+int VirtualFilesystem::findINodeId(std::string name){
+    for (unsigned int i = 0; i < inodes.size(); ++i){
+        if (inodes[i].name == name){
+            return i;
+        }
+    }
+    return -1;
 }
 
 unsigned int VirtualFilesystem::alloc(unsigned int blocks){
@@ -233,13 +248,12 @@ void VirtualFilesystem::display_filemap(){
   {
     tab[i] = '.';
   }
-      std::cout << "elo" << size << std::endl;
-std::cout << inodes.size() << std::endl;
   for(unsigned int i = 0; i < inodes.size(); ++i)
   {
     for(unsigned int j = inodes[i].firstBlock; j < inodes[i].lastBlock(); ++j)
     {
       tab[j] = inodes[i].name[0];
+      std::cout << inodes[i].name << std::endl;
     }
   }
   std::cout<< "Legend: " << std::endl
@@ -251,14 +265,55 @@ std::cout << inodes.size() << std::endl;
   for(unsigned i = 0; i < size; ++i)
   {
     std::cout << tab[i];
-    if(!((i+1)&31))
-    {
-      std::cout << std::endl;
-    }
+    if ((i + 1) % 32 == 0) std::cout << std::endl;
   }
   std::cout << std::endl;
 }
 
-int VirtualFilesystem::cmpINodes(INode a, INode b){
+bool VirtualFilesystem::cmpINodes(INode a, INode b){
     return a.firstBlock < b.firstBlock;
+}
+
+void VirtualFilesystem::renameFile(std::string oldName, std::string newName){
+    if (findINode(newName) != NULL){
+        throw FilenameNotUnique();
+    }
+
+    INode * inode;
+    if ((inode = findINode(oldName)) == NULL){
+        throw FileNotExist();
+    }
+
+    strcpy(inode->name, newName.c_str());
+}
+
+void VirtualFilesystem::removeFile(std::string filename){
+    int nodeId = findINodeId(filename);
+    if (nodeId == -1){
+        throw FileNotExist();
+    }
+    inodes.erase(inodes.begin() + nodeId);
+}
+
+void VirtualFilesystem::list(){
+    using std::setw;
+
+    std::cout << setw(10) << "[block]" 
+            << setw(10) << "[block]"   
+            << setw(10) << "[blocks]"   
+            << setw(10) << "[bytes]" << std::endl;
+    std::cout << setw(10) << "start" 
+            << setw(10) << "end" 
+            << setw(10) << "size" 
+            << setw(10) << "size" 
+            << setw(30) << "name" << std::endl;
+    for (int i = 0; i < 70; ++i) std::cout << "-";
+    std::cout << std::endl;
+    for(unsigned i = 0; i < inodes.size(); ++i){
+    std::cout << setw(10) << inodes[i].firstBlock
+            << setw(10) << inodes[i].lastBlock() - 1
+            << setw(10) << inodes[i].blocks
+            << setw(10) << inodes[i].size
+            << setw(30) << inodes[i].name << std::endl;
+    }
 }

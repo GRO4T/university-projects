@@ -10,6 +10,8 @@
 #include <boost/filesystem.hpp>
 #include <boost/program_options.hpp>
 
+#include "filesystem_exception.hpp"
+
 class VirtualFilesystem{
 private:
     struct INode;
@@ -35,19 +37,21 @@ private:
 
     typedef char buffer [BLOCK_SIZE];
 
-    INode * findINodeByName(std::string name);
+    INode * findINode(std::string name);
+    int findINodeId(std::string name);
     unsigned int alloc(unsigned int blocks);
     void defragment();
     void close();
-    static int cmpINodes(INode a, INode b);
+    static bool cmpINodes(INode a, INode b);
 public:
     VirtualFilesystem(std::string name);
     ~VirtualFilesystem();
     void create(unsigned int size);
     void open();
-    void uploadFile(std::string filename);
-    void downloadFile(std::string filename);
-    void renameFile(std::string oldName, std::string newName){}
+    void uploadFile(std::string sourceFilename, std::string uploadAs);
+    void downloadFile(std::string sourceFilename, std::string downloadAs);
+    void renameFile(std::string oldName, std::string newName);
+    void removeFile(std::string filename);
     void list();
 
     void display_filemap();
