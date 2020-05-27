@@ -55,7 +55,37 @@ void VirtualFilesystem::open(){
 }
 
 void VirtualFilesystem::close(){
-    
+  sort(inodes.begin(), inodes.end(), cmpINodes);
+  buffer bufs[SYSTEM_BLOCKS];
+  unsigned int index = 0;
+  for(unsigned int i=0; i < SYSTEM_BLOCKS; i++)
+  {
+    for(unsigned int j=0; j < BLOCK_SIZE; j+=sizeof(INode), index++)
+    {
+      // ponizsza linijka ma prawo nie dzialac
+      INode *ptri = reinterpret_cast<INode*>(bufs[i] + j);
+      if(index < inodes.size())
+      {
+        *ptri = inodes[index];
+      }
+      else
+      {
+        // zerujemy pozostale deskryptory, na wszelki wypadek...
+        for(unsigned int k=0; k < sizeof(INode); ++k)
+        {
+          *(bufs[i] + j + k) = 0;
+        }
+      }
+    }
+  }
+  std::fstream outStream;
+  outStream.open(name.c_str(), std::ios::in|std::ios::out|std::ios::binary);
+  outStream.seekp(std::ios_base::beg);
+  for(unsigned i=0; i < SYSTEM_BLOCKS; i++)
+  {
+    outStream.write(bufs[j], BLOCK_SIZE);
+  }
+  outStream.close();
 }
 
 void VirtualFilesystem::uploadFile(std::string filename){
@@ -202,4 +232,8 @@ std::cout << inodes.size() << std::endl;
     }
   }
   std::cout << std::endl;
+}
+
+int VirtualFilesystem::cmpINodes(INode a, INode b){
+    return a.begin < b.begin;
 }

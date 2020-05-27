@@ -39,6 +39,7 @@ private:
     unsigned int alloc(unsigned int blocks);
     void defragment();
     void close();
+    int cmpINodes(INode a, INode b);
 public:
     VirtualFilesystem(std::string name);
     ~VirtualFilesystem(){}
