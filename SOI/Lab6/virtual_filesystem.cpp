@@ -58,32 +58,27 @@ void VirtualFilesystem::close(){
   sort(inodes.begin(), inodes.end(), cmpINodes);
   buffer bufs[SYSTEM_BLOCKS];
   unsigned int index = 0;
-  for(unsigned int i=0; i < SYSTEM_BLOCKS; i++)
-  {
-    for(unsigned int j=0; j < BLOCK_SIZE; j+=sizeof(INode), index++)
-    {
-      // ponizsza linijka ma prawo nie dzialac
-      INode *ptri = reinterpret_cast<INode*>(bufs[i] + j);
-      if(index < inodes.size())
-      {
-        *ptri = inodes[index];
+  for(unsigned int i = 0; i < SYSTEM_BLOCKS; ++i){
+    for(unsigned int j = 0; j < BLOCK_SIZE; j += sizeof(INode), ++index){
+      INode * placeForINode = reinterpret_cast<INode*>(bufs[i] + j);
+      // save INode
+      if(index < inodes.size()){
+        *placeForINode = inodes[index];
       }
-      else
-      {
-        // zerujemy pozostale deskryptory, na wszelki wypadek...
-        for(unsigned int k=0; k < sizeof(INode); ++k)
-        {
+      // fill with '0's everything else
+      else{
+        for(unsigned int k = 0; k < sizeof(INode); ++k){
           *(bufs[i] + j + k) = 0;
         }
       }
     }
   }
+
   std::fstream outStream;
   outStream.open(name.c_str(), std::ios::in|std::ios::out|std::ios::binary);
   outStream.seekp(std::ios_base::beg);
-  for(unsigned i=0; i < SYSTEM_BLOCKS; i++)
-  {
-    outStream.write(bufs[j], BLOCK_SIZE);
+  for(unsigned i=0; i < SYSTEM_BLOCKS; i++){
+    outStream.write(bufs[i], BLOCK_SIZE);
   }
   outStream.close();
 }
@@ -111,7 +106,7 @@ void VirtualFilesystem::uploadFile(std::string filename){
     inStream.close();
 
     std::fstream outStream;
-    outStream.open(name.c_str(), std::ios::in | std::ios::out | std::ios::binary);
+    outStream.open(name.c_str(), std::ios::out | std::ios::in | std::ios::binary);
     outStream.seekg(newFilePos * BLOCK_SIZE);
     for (unsigned int i = 0; i < blocksNeeded; ++i){
         outStream.write(bufs[i], BLOCK_SIZE);
@@ -120,13 +115,42 @@ void VirtualFilesystem::uploadFile(std::string filename){
 
     INode newINode;
     newINode.used = 1;
-    newINode.begin = newFilePos;
+    newINode.firstBlock = newFilePos;
     newINode.size = filesize;
     newINode.blocks = blocksNeeded;
     strcpy(newINode.name, filename.c_str());
     inodes.push_back(newINode);
+}
 
-    std::cout << inodes.size() << std::endl;
+void VirtualFilesystem::downloadFile(std::string filename){
+    INode * inode = findINodeByName(filename);
+    if (inode == NULL){
+        throw std::runtime_error("No such file!");
+    }
+    
+    buffer bufs[inode->blocks];
+    std::ifstream inStream;
+    inStream.open(name);
+    inStream.seekg(inode->firstBlock * BLOCK_SIZE);
+    for (unsigned int i = 0; i < inode->blocks; ++i){
+        inStream.read(bufs[i], BLOCK_SIZE);
+    }
+    inStream.close();
+
+    std::cout << inode->name << std::endl;
+    std::ofstream outStream;
+    outStream.open(inode->name);
+    for (unsigned int i = 0; i < inode->blocks; ++i){
+        if (i + 1 < inode->blocks){
+            outStream.write(bufs[i], BLOCK_SIZE);
+        }
+        else{
+            std::cout << inode->size << std::endl;
+            outStream.write(bufs[i], inode->size - (inode->blocks - 1) * BLOCK_SIZE);
+        }
+        
+    }
+    outStream.close();
 }
 
 VirtualFilesystem::INode * VirtualFilesystem::findINodeByName(std::string name){
@@ -143,19 +167,19 @@ unsigned int VirtualFilesystem::alloc(unsigned int blocks){
         unsigned int allocatedNodes = inodes.size();
 
         // check if there is space after SYSTEM_BLOCKS
-        if (allocatedNodes == 0 || inodes[0].begin - SYSTEM_BLOCKS >= blocks)
+        if (allocatedNodes == 0 || inodes[0].firstBlock - SYSTEM_BLOCKS >= blocks)
             return SYSTEM_BLOCKS;
 
         for (unsigned int i = 1; i < inodes.size(); ++i){
-            unsigned int hole = inodes[i].begin - inodes[i - 1].end();
+            unsigned int hole = inodes[i].firstBlock - inodes[i - 1].lastBlock();
             if (hole >= blocks){
-                return inodes[i - 1].end();
+                return inodes[i - 1].lastBlock();
             }
         }
 
         //check if there is space at the end
-        if (allocatedNodes != 0 && size - inodes[allocatedNodes - 1].end() >= blocks)
-            return inodes[allocatedNodes - 1].end();
+        if (allocatedNodes != 0 && size - inodes[allocatedNodes - 1].lastBlock() >= blocks)
+            return inodes[allocatedNodes - 1].lastBlock();
 
         //if no space was found during iteration defragmentQ
         defragment();
@@ -167,19 +191,19 @@ void VirtualFilesystem::defragment(){
     unsigned int newBlockPos = SYSTEM_BLOCKS;
 
     // if first block is perfectly aligned find next that isn't
-    if (inodes[0].begin == SYSTEM_BLOCKS){
+    if (inodes[0].firstBlock == SYSTEM_BLOCKS){
         for (blockToMoveId = 1; blockToMoveId < inodes.size(); ++blockToMoveId){
-            if (inodes[blockToMoveId - 1].end() < inodes[blockToMoveId - 1].begin){
-                newBlockPos = inodes[blockToMoveId - 1].end();
+            if (inodes[blockToMoveId - 1].lastBlock() < inodes[blockToMoveId - 1].firstBlock){
+                newBlockPos = inodes[blockToMoveId - 1].lastBlock();
                 break;
             }
         }
     }
 
     unsigned int blocks = inodes[blockToMoveId].blocks;
-    unsigned int oldBlockPos = inodes[blockToMoveId].begin;
+    unsigned int oldBlockPos = inodes[blockToMoveId].firstBlock;
 
-    inodes[blockToMoveId].begin = newBlockPos;
+    inodes[blockToMoveId].firstBlock = newBlockPos;
     buffer bufs[blocks];
 
     std::ifstream inStream;
@@ -209,10 +233,11 @@ void VirtualFilesystem::display_filemap(){
   {
     tab[i] = '.';
   }
+      std::cout << "elo" << size << std::endl;
 std::cout << inodes.size() << std::endl;
   for(unsigned int i = 0; i < inodes.size(); ++i)
   {
-    for(unsigned int j = inodes[i].begin; j < inodes[i].end(); ++j)
+    for(unsigned int j = inodes[i].firstBlock; j < inodes[i].lastBlock(); ++j)
     {
       tab[j] = inodes[i].name[0];
     }
@@ -235,5 +260,5 @@ std::cout << inodes.size() << std::endl;
 }
 
 int VirtualFilesystem::cmpINodes(INode a, INode b){
-    return a.begin < b.begin;
+    return a.firstBlock < b.firstBlock;
 }

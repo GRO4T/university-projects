@@ -23,12 +23,12 @@ private:
 
     struct INode{
         bool used;
-        unsigned int begin;
+        unsigned int firstBlock;
         unsigned int size;
         unsigned int blocks;
         char name[48];
 
-        unsigned int end(){ return begin + blocks; }
+        unsigned int lastBlock(){ return firstBlock + blocks; }
     };
 
     std::vector<INode> inodes;
@@ -39,14 +39,14 @@ private:
     unsigned int alloc(unsigned int blocks);
     void defragment();
     void close();
-    int cmpINodes(INode a, INode b);
+    static int cmpINodes(INode a, INode b);
 public:
     VirtualFilesystem(std::string name);
-    ~VirtualFilesystem(){}
+    ~VirtualFilesystem();
     void create(unsigned int size);
     void open();
     void uploadFile(std::string filename);
-    void downloadFile(std::string filename){}
+    void downloadFile(std::string filename);
     void renameFile(std::string oldName, std::string newName){}
     void list();
 

@@ -47,6 +47,10 @@ int main(int argc, char * argv[]){
             std::string filename = varMap["upload"].as<std::string>();
             virtualFilesystem.uploadFile(filename);
         }
+        else if (varMap.count("download")){
+            std::string filename = varMap["download"].as<std::string>();
+            virtualFilesystem.downloadFile(filename);
+        }
         else if (varMap.count("map")){
             virtualFilesystem.display_filemap();
         }
@@ -68,6 +72,8 @@ void prepVariableMap(
         ("help,h", "prints help")
         ("upload,u", boost::program_options::value<std::string>()->required(),
         "copies file with given name to the filesystem")
+        ("download,d", boost::program_options::value<std::string>()->required(),
+        "copies file with given name from the filesystem")
         ("map,M", "displays current map of filesystem")
     ;
     store(boost::program_options::command_line_parser(argc, argv).options(optDesc).run(), vm);
