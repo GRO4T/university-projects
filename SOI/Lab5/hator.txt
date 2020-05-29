@@ -1,0 +1,126 @@
+const BUFFER_SIZE = 4;
+
+server semaphore {
+  var state : {up, down};
+
+  { p | state == :up } -> { state = :down; return :ok; }
+  { v } -> { state = :up; return :ok; }
+}
+
+server semaphoreM {
+  var state : 0..BUFFER_SIZE;
+  { p | state > 0 } -> { state = state - 1; return :ok; }
+  { v | state < BUFFER_SIZE } -> { state = state + 1; return :ok; }
+  { v | state == BUFFER_SIZE } -> { return :ok; }
+}
+
+server buffer {
+  var data : (0..1)[BUFFER_SIZE];
+  var count : 0..BUFFER_SIZE;
+
+  { put | count < BUFFER_SIZE } ->
+    { data[count] = 0; count = count + 1; return :ok; }
+  { put | count < BUFFER_SIZE } ->
+    { data[count] = 1; count = count + 1; return :ok; }
+
+  { get | sum(data) >= data[0] && count >= 2 } ->
+    { count = count - 1; data = data[1..BUFFER_SIZE-1] + [0]; return :ok; }
+
+  { canRead | count < 2 } -> { return :false; }
+  { canRead | count >= 2 } -> { return :true; }
+
+  { pAcondition | sum(data) > 2 } -> { return :false; }
+  { pAcondition | sum(data) <= 2 } -> { return :true; }
+
+  { canWrite | count < BUFFER_SIZE } -> { return :true; }
+  { canWrite | count == BUFFER_SIZE } -> { return :false; }
+}
+
+server bool {
+  var val : {true, false};
+
+  { set_true } -> { val = :true; return :ok; }
+  { set_false } -> { val = :false; return :ok; }
+
+  { get | val == :true } -> { return :true; }
+  { get | val == :false } -> { return :false; }
+}
+
+var buffer = buffer() { count = 0, data = [BUFFER_SIZE; 0] };
+var s = semaphore() { state = :up };
+var cs = semaphoreM() { state = 0 };
+var pAs = semaphore() { state = :down };
+var pBs = semaphore() { state = :down };
+var pAwaiting = bool() { val = :false };
+var pBwaiting = bool() { val = :false };
+
+thread consumer() {
+  loop {
+    cs.p();
+    s.p();
+    buffer.get();
+    match pAwaiting.get() {
+      :true => match buffer.pAcondition() {
+        :true => pAs.v();
+        :false => match pBwaiting.get() {
+          :true => pBs.v();
+          :false => s.v();
+        }
+      }
+      :false => match pBwaiting.get() {
+        :true => pBs.v();
+        :false => s.v();
+      }
+    }
+  }
+}
+
+thread producerB() {
+  loop {
+    s.p();
+    match buffer.canWrite() {
+      :false => {
+        pBwaiting.set_true();
+        s.v();
+        pBs.p();
+        pBwaiting.set_false();
+      }
+      :true => skip;
+    }
+    buffer.put();
+    match buffer.canRead() {
+      :true => cs.v();
+      :false => skip;
+    }
+    s.v();
+  }
+}
+
+thread producerA() {
+  loop {
+    s.p();
+    match buffer.canWrite() {
+      :false => {
+        pAwaiting.set(:true);
+        s.v();
+        pAs.p();
+        pAwaiting.set(:false);
+      }
+      :true => match buffer.pAcondition() {
+        :false => {
+          pAwaiting.set(:true);
+          s.v();
+          pAs.p();
+          pAwaiting.set(:false);
+        }
+        :true => skip;
+      }
+    }
+    buffer.put();
+    match buffer.canRead() {
+      :true => cs.v();
+      :false => skip;
+    }
+    s.v();
+  }
+}
