@@ -54,7 +54,8 @@ public:
     void removeFile(std::string filename);
     void list();
 
-    void display_filemap();
+    void displayFilemap();
+    void displayDetailedFilemap();
 
 
 

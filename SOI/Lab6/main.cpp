@@ -38,6 +38,8 @@ void prepVariableMap(boost_var_map & vm, boost_opt_desc & optDesc,
         "copies file with given name from the filesystem")
         ("map,M",
         "displays current map of filesystem")
+        ("detailed,D",
+        "shows detailed filesystem map")
         ("name,n", value<std::string>()->required(),
         "specify the new name for the downloaded file")
         ("move,m", value<std::vector<std::string>>()->required()->multitoken(),
@@ -70,7 +72,6 @@ int run(int argc, char * argv[]){
     std::string file = varMap["file"].as<std::string>();
     VirtualFilesystem virtualFilesystem(file);
     if (varMap.count("create")){
-        printf("hello");
         unsigned int size = varMap["create"].as<unsigned int>();
         virtualFilesystem.create(size);
     }
@@ -99,7 +100,10 @@ int run(int argc, char * argv[]){
             virtualFilesystem.removeFile(filename);
         }
         else if (varMap.count("map")){
-            virtualFilesystem.display_filemap();
+            virtualFilesystem.displayFilemap();
+        }
+        else if (varMap.count("detailed")){
+            virtualFilesystem.displayDetailedFilemap();
         }
         else if (varMap.count("list")){
             virtualFilesystem.list();
