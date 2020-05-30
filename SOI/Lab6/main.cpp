@@ -36,7 +36,8 @@ void prepVariableMap(boost_var_map & vm, boost_opt_desc & optDesc,
         "copies file with given name to the filesystem")
         ("download,d", value<std::string>()->required(),
         "copies file with given name from the filesystem")
-        ("map,M", "displays current map of filesystem")
+        ("map,M",
+        "displays current map of filesystem")
         ("name,n", value<std::string>()->required(),
         "specify the new name for the downloaded file")
         ("move,m", value<std::vector<std::string>>()->required()->multitoken(),

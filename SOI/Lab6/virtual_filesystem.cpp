@@ -238,36 +238,31 @@ void VirtualFilesystem::defragment(){
 }
 
 void VirtualFilesystem::display_filemap(){
-  char tab[size];
+    char tab[size];
 
-  for(unsigned int i = 0; i < SYSTEM_BLOCKS; ++i)
-  {
-    tab[i] = '+';
-  }
-  for(unsigned int i = SYSTEM_BLOCKS; i < size; ++i)
-  {
-    tab[i] = '.';
-  }
-  for(unsigned int i = 0; i < inodes.size(); ++i)
-  {
-    for(unsigned int j = inodes[i].firstBlock; j < inodes[i].lastBlock(); ++j)
-    {
-      tab[j] = inodes[i].name[0];
-      std::cout << inodes[i].name << std::endl;
+    for(unsigned int i = 0; i < SYSTEM_BLOCKS; ++i){
+        tab[i] = '+';
     }
-  }
-  std::cout<< "Legend: " << std::endl
-      << "  '.' = free block" << std::endl 
-      << "  '+' = system block (reserved for inodes)" << std::endl
-      << "  'l' = block occupied by a file (l - first letter of the filename)" << std::endl
-      << "1 block = "<< BLOCK_SIZE << " bytes" << std::endl << std::endl;  
+    for(unsigned int i = SYSTEM_BLOCKS; i < size; ++i){
+        tab[i] = '.';
+    }
+    for(unsigned int i = 0; i < inodes.size(); ++i){
+        for(unsigned int j = inodes[i].firstBlock; j < inodes[i].lastBlock(); ++j){
+            tab[j] = inodes[i].name[0];
+        }
+    }
+    std::cout<< "Legend: " << std::endl
+        << "  '.' = free block" << std::endl 
+        << "  '+' = system block (reserved for inodes)" << std::endl
+        << "  'l' = block occupied by a file (l - first letter of the filename)" << std::endl
+        << "1 block = "<< BLOCK_SIZE << " bytes" << std::endl << std::endl;
       
-  for(unsigned i = 0; i < size; ++i)
-  {
-    std::cout << tab[i];
-    if ((i + 1) % 32 == 0) std::cout << std::endl;
-  }
-  std::cout << std::endl;
+    for(unsigned i = 0; i < size; ++i){
+        std::cout << tab[i];
+
+        if ((i + 1) % 32 == 0) std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
 
 bool VirtualFilesystem::cmpINodes(INode a, INode b){
