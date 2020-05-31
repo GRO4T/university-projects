@@ -55,7 +55,6 @@ void VirtualFilesystem::open(){
 }
 
 void VirtualFilesystem::close(){
-  sort(inodes.begin(), inodes.end(), cmpINodes);
   buffer bufs[SYSTEM_BLOCKS];
   unsigned int index = 0;
   for(unsigned int i = 0; i < SYSTEM_BLOCKS; ++i){
@@ -314,10 +313,6 @@ void VirtualFilesystem::displayDetailedFilemap(){
         if ((i + 1) % CHUNKS_PER_LINE == 0) std::cout << std::endl;
     }
     std::cout << std::endl;
-}
-
-bool VirtualFilesystem::cmpINodes(INode a, INode b){
-    return a.firstBlock < b.firstBlock;
 }
 
 void VirtualFilesystem::renameFile(std::string oldName, std::string newName){
