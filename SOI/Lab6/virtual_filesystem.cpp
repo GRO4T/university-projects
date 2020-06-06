@@ -55,7 +55,6 @@ void VirtualFilesystem::open(){
 }
 
 void VirtualFilesystem::close(){
-  sort(inodes.begin(), inodes.end(), cmpINodes);
   buffer bufs[SYSTEM_BLOCKS];
   unsigned int index = 0;
   for(unsigned int i = 0; i < SYSTEM_BLOCKS; ++i){
@@ -179,10 +178,10 @@ int VirtualFilesystem::findINodeId(std::string name){
 
 unsigned int VirtualFilesystem::alloc(unsigned int blocks){
     while(1){
-        unsigned int allocatedNodes = inodes.size();
+        unsigned int usedNodes = inodes.size();
 
         // check if there is space after SYSTEM_BLOCKS
-        if (allocatedNodes == 0 || inodes[0].firstBlock - SYSTEM_BLOCKS >= blocks)
+        if (usedNodes == 0 || inodes[0].firstBlock - SYSTEM_BLOCKS >= blocks)
             return SYSTEM_BLOCKS;
 
         for (unsigned int i = 1; i < inodes.size(); ++i){
@@ -193,85 +192,127 @@ unsigned int VirtualFilesystem::alloc(unsigned int blocks){
         }
 
         //check if there is space at the end
-        if (allocatedNodes != 0 && size - inodes[allocatedNodes - 1].lastBlock() >= blocks)
-            return inodes[allocatedNodes - 1].lastBlock();
+        if (usedNodes != 0 && size - inodes[usedNodes - 1].lastBlock() >= blocks)
+            return inodes[usedNodes - 1].lastBlock();
 
-        //if no space was found during iteration defragmentQ
+        //if no space was found during iteration defragment
         defragment();
+
     }
 }
 
 void VirtualFilesystem::defragment(){
-    unsigned int blockToMoveId = 0;
-    unsigned int newBlockPos = SYSTEM_BLOCKS;
+    unsigned int fileToMoveId = 0;
+    unsigned int newPos = SYSTEM_BLOCKS;
 
     // if first block is perfectly aligned find next that isn't
     if (inodes[0].firstBlock == SYSTEM_BLOCKS){
-        for (blockToMoveId = 1; blockToMoveId < inodes.size(); ++blockToMoveId){
-            if (inodes[blockToMoveId - 1].lastBlock() < inodes[blockToMoveId - 1].firstBlock){
-                newBlockPos = inodes[blockToMoveId - 1].lastBlock();
+        for (fileToMoveId = 1; fileToMoveId < inodes.size(); ++fileToMoveId){
+            if (inodes[fileToMoveId - 1].lastBlock() < inodes[fileToMoveId].firstBlock){
+                newPos = inodes[fileToMoveId - 1].lastBlock();
                 break;
             }
         }
     }
 
-    unsigned int blocks = inodes[blockToMoveId].blocks;
-    unsigned int oldBlockPos = inodes[blockToMoveId].firstBlock;
+    //std::cout << newPos << std::endl;
 
-    inodes[blockToMoveId].firstBlock = newBlockPos;
+    unsigned int blocks = inodes[fileToMoveId].blocks;
+    unsigned int oldPos = inodes[fileToMoveId].firstBlock;
+
+    inodes[fileToMoveId].firstBlock = newPos;
     buffer bufs[blocks];
 
     std::ifstream inStream;
     inStream.open(name.c_str());
-    inStream.seekg(oldBlockPos * BLOCK_SIZE);
+    inStream.seekg(oldPos * BLOCK_SIZE);
     for (unsigned int i = 0; i < blocks; ++i){
         inStream.read(bufs[i], BLOCK_SIZE);
     }
+    inStream.close();
 
     std::fstream outStream;
     outStream.open(name.c_str(), std::ios::in | std::ios::out | std::ios::binary);
-    outStream.seekg(newBlockPos * BLOCK_SIZE);
+    outStream.seekg(newPos * BLOCK_SIZE);
     for (unsigned int i = 0; i < blocks; ++i){
         outStream.write(bufs[i], BLOCK_SIZE);
     }
-
+    outStream.close();
 }
 
-void VirtualFilesystem::display_filemap(){
-  char tab[size];
+void VirtualFilesystem::displayFilemap(){
+    char tab[size];
 
-  for(unsigned int i = 0; i < SYSTEM_BLOCKS; ++i)
-  {
-    tab[i] = '+';
-  }
-  for(unsigned int i = SYSTEM_BLOCKS; i < size; ++i)
-  {
-    tab[i] = '.';
-  }
-  for(unsigned int i = 0; i < inodes.size(); ++i)
-  {
-    for(unsigned int j = inodes[i].firstBlock; j < inodes[i].lastBlock(); ++j)
-    {
-      tab[j] = inodes[i].name[0];
-      std::cout << inodes[i].name << std::endl;
+    for(unsigned int i = 0; i < SYSTEM_BLOCKS; ++i){
+        tab[i] = '+';
     }
-  }
-  std::cout<< "Legend: " << std::endl
-      << "  '.' = free block" << std::endl 
-      << "  '+' = system block (reserved for inodes)" << std::endl
-      << "  'l' = block occupied by a file (l - first letter of the filename)" << std::endl
-      << "1 block = "<< BLOCK_SIZE << " bytes" << std::endl << std::endl;  
+    for(unsigned int i = SYSTEM_BLOCKS; i < size; ++i){
+        tab[i] = '.';
+    }
+    for(unsigned int i = 0; i < inodes.size(); ++i){
+        for(unsigned int j = inodes[i].firstBlock; j < inodes[i].lastBlock(); ++j){
+            tab[j] = inodes[i].name[0];
+        }
+    }
+    std::cout<< "Legend: " << std::endl
+        << "  '.' = free block" << std::endl 
+        << "  '+' = system block (reserved for inodes)" << std::endl
+        << "  'l' = block occupied by a file (l - first letter of the filename)" << std::endl
+        << "1 block = "<< BLOCK_SIZE << " bytes" << std::endl << std::endl;
       
-  for(unsigned i = 0; i < size; ++i)
-  {
-    std::cout << tab[i];
-    if ((i + 1) % 32 == 0) std::cout << std::endl;
-  }
-  std::cout << std::endl;
+    for(unsigned i = 0; i < size; ++i){
+        std::cout << tab[i];
+
+        if ((i + 1) % 32 == 0) std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
 
-bool VirtualFilesystem::cmpINodes(INode a, INode b){
-    return a.firstBlock < b.firstBlock;
+void VirtualFilesystem::displayDetailedFilemap(){
+    const unsigned int CHUNK_SIZE = 64; // in bytes
+    const unsigned int CHUNKS_PER_LINE = 64;
+    const unsigned int CHUNKS_PER_BLOCK = BLOCK_SIZE / CHUNK_SIZE;
+    char tab[size * CHUNKS_PER_BLOCK];
+
+    //Color::ColorPrinter cprinter;
+
+    for(unsigned int i = 0; i < SYSTEM_BLOCKS * CHUNKS_PER_BLOCK; ++i){
+        tab[i] = '+';
+    }
+    for(unsigned int i = SYSTEM_BLOCKS * CHUNKS_PER_BLOCK; i < size * CHUNKS_PER_BLOCK; ++i){
+        tab[i] = '.';
+    }
+    for(unsigned int i = 0; i < inodes.size(); ++i){
+        for(unsigned int j = inodes[i].firstBlock; j < inodes[i].lastBlock(); ++j){
+            unsigned int blockFill = BLOCK_SIZE;
+            if (j == inodes[i].lastBlock() - 1){
+                blockFill = (inodes[i].size - 1) % BLOCK_SIZE;
+                blockFill++;
+            }
+
+            for (unsigned int k = 0; k * CHUNK_SIZE < blockFill; ++k){
+                tab[j * CHUNKS_PER_BLOCK + k] = inodes[i].name[0];
+            }
+        }
+    }
+
+    std::cout<< "Legend: " << std::endl
+        << "  '.' = free chunk" << std::endl 
+        << "  '+' = free system block chunk (reserved for inodes)" << std::endl
+        //<< "  '"; cprinter.printRed('#'); std::cout << "' = occupied system block chunk (reserved for inodes)" << std::endl
+        //<< "  '"; cprinter.printBlue('0'); std::cout << "' = chunk occupied by a file (l - first letter of the filename)" << std::endl
+        << "  'l' = block occupied by a file (l - first letter of the filename)" << std::endl
+        << "1 chunk = "<< CHUNK_SIZE << " bytes" << std::endl
+        << "| = block separator" << std::endl << std::endl;
+      
+    for(unsigned i = 0; i < size * CHUNKS_PER_BLOCK; ++i){
+        if (i % CHUNKS_PER_LINE == 0) std::cout << "|";
+        std::cout << tab[i];
+        if ((i + 1) % CHUNKS_PER_BLOCK == 0) std::cout << "|";
+
+        if ((i + 1) % CHUNKS_PER_LINE == 0) std::cout << std::endl;
+    }
+    std::cout << std::endl;
 }
 
 void VirtualFilesystem::renameFile(std::string oldName, std::string newName){

@@ -1,0 +1,138 @@
+const BUFSIZE = 4;
+const HALF_BUFSIZE = 2;
+
+server semaphore {
+    var state : {up, down};
+
+    { p | state = :up } -> {state = :down}
+    { v } -> {state = :up}
+}
+
+server buf {
+    var even_count : 0..HALF_BUFSIZE;
+    var odd_count : 0..HALF_BUFSIZE;
+    
+    { put_even | even_count < HALF_BUFSIZE } -> { even_count = even_count + 1 }
+    { put_odd | odd_count < HALF_BUFSIZE } -> { odd_count = odd_count + 1 }
+
+    { remove_even | even_count > 0 } -> { even_count = even_count - 1 }
+    { remove_odd | odd_count > 0 } -> { odd_count = odd_count - 1 }
+
+    { a1_can_continue | even_count + odd_count < 3 } -> { true }
+    { a1_can_continue | even_count + odd_count >= 3 } -> { false }
+    { a2_can_continue | even_count > odd_count } -> { true }
+    { a2_can_continue | even_count <= odd_count } -> { false }
+    { b1_can_continue | even_count > 0 } -> { true }
+    { b1_can_continue | even_count = 0 } -> { false }
+    { b2_can_continue | odd_count > 0 } -> { true }
+    { b2_can_continue | odd_count = 0 } -> { false }
+}
+
+var buf = buf() { even_count = 0, odd_count = 0 };
+var mutex = semaphore() { state = :up };
+
+var a1_sem = semaphore() { state = :down };
+var a2_sem = semaphore() { state = :down };
+var b1_sem = semaphore() { state = :down };
+var b2_sem = semaphore() { state = :down };
+
+process producer_a1() {
+    loop {
+        match buf.a1_can_continue() {
+            :true => skip;
+            :false => a1_sem.p();
+        }
+
+        mutex.p();
+
+        buf.put_even();
+
+        match buf.b1_can_continue() {
+            :true => b1_sem.v();
+            :false => skip;
+        }
+
+        match buf.b2_can_continue() {
+            :true => b2_sem.v();
+            :false => skip;
+        }
+
+        match buf.a2_can_continue() {
+            :true => a2_sem.v();
+            :false => skip;
+        }
+
+        mutex.v();
+    }
+}
+
+process producer_a2() {
+    loop {
+        match buf.a2_can_continue() {
+            :true => skip;
+            :false => a2_sem.p();
+        }
+
+        mutex.p();
+
+        buf.put_odd();
+
+        match buf.b1_can_continue() {
+            :true => b1_sem.v();
+            :false => skip;
+        }
+
+        match buf.b2_can_continue() {
+            :true => b2_sem.v();
+            :false => skip;
+        }
+
+        mutex.v();
+    }
+}
+
+process consumer_b1() {
+    loop {
+        match buf.b1_can_continue() {
+            :true => skip;
+            :false => b1_sem.p();
+        }
+
+        mutex.p();
+
+        buf.remove_even();
+
+        match buf.a1_can_continue() {
+            :true => a1_sem.v();
+            :false => skip;
+        }
+
+        mutex.v();
+    }
+}
+
+process consumer_b2() {
+    loop {
+        match buf.b2_can_continue() {
+            :true => skip;
+            :false => b2_sem.p();
+        }
+
+        mutex.p();
+
+        buf.remove_odd();
+
+        match buf.a1_can_continue() {
+            :true => a1_sem.v();
+            :false => skip;
+        }
+
+        match buf.a2_can_continue() {
+            :true => a2_sem.v();
+            :false => skip;
+        }
+
+        mutex.v();
+    }
+}
+
