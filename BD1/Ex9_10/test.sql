@@ -1,0 +1,34 @@
+ALTER SESSION SET optimizer_dynamic_sampling=10;
+CREATE INDEX RECEPTA_IDX_TRESC ON RECEPTA(TRESC);
+
+CALL rowgen2(10000, 20009);
+
+SELECT * FROM recepta;
+
+EXPLAIN PLAN SET STATEMENT_ID = 'INDEX' FOR 
+SELECT /*+ INDEX(RECEPTA RECEPTA_IDX_TRESC) */ numer_recepty, tresc 
+FROM recepta
+WHERE LOWER(tresc) LIKE '%leki%';
+
+SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+EXPLAIN PLAN SET STATEMENT_ID = 'FULL' FOR 
+SELECT /*+ FULL(r) NO_INDEX(RECEPTA RECEPTA_IDX_TRESC)*/ tresc, numer_recepty
+FROM recepta r
+WHERE LOWER(tresc) LIKE '%leki%';
+
+SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+CREATE INDEX RECEPTA_IDX_TRESC_NR ON RECEPTA(TRESC, NUMER_RECEPTY);
+
+EXPLAIN PLAN SET STATEMENT_ID = 'INDEX_FFS' FOR 
+SELECT /*+ INDEX_FFS(RECEPTA RECEPTA_IDX_TRESC_NR) */ tresc, numer_recepty
+FROM recepta
+WHERE LOWER(tresc) LIKE '%leki%';
+
+SELECT PLAN_TABLE_OUTPUT FROM TABLE(DBMS_XPLAN.DISPLAY());
+
+SELECT recepta.*, pacjent.imie imie_pacjenta, pacjent.nazwisko nazwisko_pacjenta
+FROM recepta
+INNER JOIN pacjent on recepta.pesel_pacjenta = pacjent.pesel
+WHERE recepta.data_wystawienia >= '01-JAN-2017' AND pacjent.data_urodzenia < '01-JAN-1970';
