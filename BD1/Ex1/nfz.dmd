@@ -1,8 +1,0 @@
-<?xml version = '1.0' encoding = 'UTF-8'?>
-<OSDM_Design class="oracle.dbtools.crest.model.design.Design" name="nfz" id="036A49CA-EE3B-2E53-5AAF-9366CF4ADCF9" version="3.5">
-<createdBy>DamianPC</createdBy>
-<createdTime>2020-03-24 19:08:46 UTC</createdTime>
-<ownerDesignName>nfz</ownerDesignName>
-<capitalNames>false</capitalNames>
-<designId>036A49CA-EE3B-2E53-5AAF-9366CF4ADCF9</designId>
-</OSDM_Design>

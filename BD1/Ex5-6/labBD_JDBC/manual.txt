@@ -1,5 +1,0 @@
-# kompilowanie
-javac D:\labBD_JDBC\JavaAppJDBC.java
-
-# uruchomienie
-java -cp D:\labBD_JDBC\*; JavaAppJDBC
