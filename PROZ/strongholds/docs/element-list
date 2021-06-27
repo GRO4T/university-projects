@@ -1,0 +1,8 @@
+com.strongholds.game
+com.strongholds.game.controller
+com.strongholds.game.event
+com.strongholds.game.exception
+com.strongholds.game.gameobject
+com.strongholds.game.model
+com.strongholds.game.net
+com.strongholds.game.view
