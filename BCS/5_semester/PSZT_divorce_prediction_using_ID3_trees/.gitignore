@@ -1,0 +1,13 @@
+.idea
+
+__pycache__
+
+venv
+
+benchmarks/*
+!benchmarks/.gitkeep
+!benchmarks/gen_plots.py
+
+!benchmarks/plots/
+benchmarks/plots/*
+!benchmarks/plots/.gitkeep
