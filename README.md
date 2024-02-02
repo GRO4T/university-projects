@@ -1,9 +1,4 @@
-# uni-projects
+# University projects
+Collection of my university projects.
+> **_NOTE:_**  The most important ones are in the separate repos.
 
-PRI - C programming course
-
-PROI - C++ programming course
-
-ARKO - Assembly programming course
-
-PROZ - JAVA programming course
