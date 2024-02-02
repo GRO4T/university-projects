@@ -1,0 +1,2 @@
+{"message":"Login OK","context":{"userid":1,"ip":"172.18.0.1"},"level":200,"level_name":"INFO","channel":"app","datetime":{"date":"2021-01-17 23:39:22.902327","timezone_type":3,"timezone":"UTC"},"extra":[]}
+{"message":"list_tables on invalid database connection","context":{"userid":1},"level":400,"level_name":"ERROR","channel":"app","datetime":{"date":"2021-01-17 23:41:25.116272","timezone_type":3,"timezone":"UTC"},"extra":[]}

@@ -1,0 +1,2 @@
+[2021-01-23 00:58:47] app_visit.INFO: admin => 5 {"appid":"5","OBJID":null,"SID":null,"pid":null,"userid":1,"permission":0} []
+[2021-01-23 00:58:56] app_visit.INFO: admin => 6 {"appid":"6","OBJID":null,"SID":null,"pid":null,"userid":1,"permission":0} []

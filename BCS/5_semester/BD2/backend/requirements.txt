@@ -1,0 +1,8 @@
+flask
+Flask-SQLAlchemy
+Flask-Pydantic
+Flask-JWT
+PyMySQL
+pydantic
+pydantic-sqlalchemy
+bcrypt

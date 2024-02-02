@@ -1,0 +1,11 @@
+GET http://localhost:5000/api/employee/by-subordinate/1
+
+###
+
+POST http://localhost:5000/api/auth HTTP/1.1
+content-type: application/json
+
+{
+    "username": "jbogdański83",
+    "password": "jbogdański83"
+}

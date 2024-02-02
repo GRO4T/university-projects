@@ -1,0 +1,2 @@
+{"message":"Login OK","context":{"userid":1,"ip":"172.23.0.1"},"level":200,"level_name":"INFO","channel":"app","datetime":{"date":"2021-01-23 00:58:42.754916","timezone_type":3,"timezone":"UTC"},"extra":[]}
+{"message":"Login OK","context":{"userid":1,"ip":"172.23.0.1"},"level":200,"level_name":"INFO","channel":"app","datetime":{"date":"2021-01-23 01:02:55.432512","timezone_type":3,"timezone":"UTC"},"extra":[]}

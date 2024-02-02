@@ -1,0 +1,1 @@
+/** define functions that available on all Dbface pages */
