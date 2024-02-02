@@ -1,0 +1,45 @@
+version: '3'
+services:
+  nexus:
+    image: sonatype/nexus3:3.0.0
+    volumes:
+      - nexus_data:/sonatype-work
+    ports:
+      - 8081:8081
+    networks:
+      - mynetwork
+  sonarqube:
+    image: sonarqube:lts
+    container_name: sonarqube
+    volumes:
+      - sonarqube_conf:/opt/sonarqube/conf
+      - sonarqube_data:/opt/sonarqube/data
+      - sonarqube_extensions:/opt/sonarqube/extensions
+      - sonarqube_bundled-plugins:/opt/sonarqube/lib/bundled-plugins
+    ports:
+      - 9000:9000
+    networks:
+      - mynetwork
+  jenkins:
+    build: .
+    container_name: jenkins
+    user: root
+    ports:
+      - 8082:8080
+      - 50000:50000
+    volumes:
+      - jenkins_home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+    networks:
+      - mynetwork
+networks:
+  mynetwork:
+volumes:
+  jenkins_home:
+    driver: local
+    name: jenkins_home
+  sonarqube_conf:
+  sonarqube_data:
+  sonarqube_extensions:
+  sonarqube_bundled-plugins:
+  nexus_data:

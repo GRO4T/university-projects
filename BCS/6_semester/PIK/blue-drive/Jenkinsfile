@@ -1,0 +1,98 @@
+pipeline {
+  agent any
+  environment {
+   BITBUCKET_COMMON_CREDS = credentials('jenkins-bitbucket-common-creds')
+  }
+  options {
+    // This is required if you want to clean before build
+    skipDefaultCheckout(true)
+  }
+
+  stages {
+    stage('Build') {
+      steps {
+        script {
+          cleanWs()
+          checkout scm
+          sh 'git fetch --all --tags'
+          sh 'git tag'
+          echo 'Build...'
+          dir("backend") {
+            sh './gradlew clean build -x test'
+          }
+        }
+      }
+    }
+
+    stage('Test') {
+      steps {
+        script {
+          echo 'Test...'
+          dir("backend") {
+            sh './gradlew test'
+          }
+        }
+      }
+    }
+
+    stage('SonarQube analysis') {
+      steps {
+        withSonarQubeEnv('SonarQube') {
+          dir("backend") {
+            sh './gradlew sonarqube'
+          }
+        }
+      }
+    }
+
+    stage('Publish') {
+      when {
+        branch 'master'
+      }
+      steps {
+        script {
+          echo 'Publish to Nexus...'
+          dir("backend") {
+            sh './gradlew uploadArchives'
+          }
+        } 
+      }
+    }
+
+    stage('Release') {
+      when {
+        branch 'master'
+      }
+      steps {
+        script {
+          echo 'Release...'
+          dir("backend") {
+            sh './gradlew release -Prelease.disableChecks -Prelease.pushTagsOnly  -Prelease.customUsername=$BITBUCKET_COMMON_CREDS_USR -Prelease.customPassword=$BITBUCKET_COMMON_CREDS_PSW'
+          }
+        } 
+      }
+    }
+
+    stage('Deploy') {
+      when {
+        branch 'master'
+      }
+      steps {
+        script {
+          echo 'Deploy...'
+          try {
+            sh 'docker container stop backend'
+            sh 'docker container rm backend'
+            sh 'docker image rm backend-image:latest'
+          }
+          catch(err) {
+            echo '${err}'
+          }
+          sh 'chmod +x ./deploy.sh'
+          sh './deploy.sh'
+        }
+      }
+    }
+
+  }
+}

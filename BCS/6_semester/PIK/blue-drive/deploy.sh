@@ -1,0 +1,14 @@
+#!/bin/bash
+
+docker build --rm -t backend-image \
+  --build-arg SPRING_DATA_MONGODB_HOST=$SPRING_DATA_MONGODB_HOST \
+  --build-arg SPRING_DATA_MONGODB_PASSWORD=$SPRING_DATA_MONGODB_PASSWORD \
+  --build-arg SPRING_DATA_MONGODB_PORT=$SPRING_DATA_MONGODB_PORT \
+  --build-arg SPRING_DATA_MONGODB_USERNAME=$SPRING_DATA_MONGODB_USERNAME \
+  --build-arg SPRING_DATA_MONGODB_DATABASE=$SPRING_DATA_MONGODB_DATABASE \
+  --build-arg SWIFT_STORAGE_PWD=$SWIFT_STORAGE_PWD \
+  --build-arg SWIFT_STORAGE_URL=$SWIFT_STORAGE_URL \
+  --build-arg SWIFT_STORAGE_USER=$SWIFT_STORAGE_USER \
+  --build-arg JWT_KEYSTORE_PWD=$JWT_KEYSTORE_PWD \
+ -f ./Dockerfile .
+docker run -it --init -d -p 8095:8095 --name backend backend-image

@@ -1,0 +1,85 @@
+plugins {
+	id 'org.springframework.boot' version '2.3.9.RELEASE'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+	id 'jacoco'
+	id 'org.sonarqube' version '3.0'
+//	id 'com.palantir.git-version' version '0.12.3'
+	id 'pl.allegro.tech.build.axion-release' version '1.13.2'
+	id 'maven'
+}
+
+group = 'com.blueincorp'
+//version = gitVersion()
+sourceCompatibility = '11'
+
+repositories {
+	maven {
+		url "http://nexus:8081/repository/maven-public/"
+	}
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation group: 'org.javaswift', name: 'joss', version: '0.10.2'
+	implementation 'org.springframework.boot:spring-boot-starter-validation'
+	implementation 'org.json:json:20180130'
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.security:spring-security-test:5.2.1.RELEASE'
+
+	compile 'io.jsonwebtoken:jjwt-api:0.10.5'
+	runtime 'io.jsonwebtoken:jjwt-impl:0.10.5',
+			'io.jsonwebtoken:jjwt-jackson:0.10.5'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.7.0'
+	compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.7.0'
+	compile 'org.springframework.boot:spring-boot-starter-data-mongodb'
+	compileOnly 'org.projectlombok:lombok:1.18.20'
+	annotationProcessor 'org.projectlombok:lombok:1.18.20'
+	testCompileOnly 'org.projectlombok:lombok:1.18.20'
+	testAnnotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+	testImplementation('org.springframework.boot:spring-boot-starter-test') {
+		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
+	}
+}
+
+test {
+	useJUnitPlatform()
+}
+
+sonarqube {
+	properties {
+		property 'sonar.host.url', 'http://localhost:9000'
+	}
+}
+
+uploadArchives {
+	repositories {
+		mavenDeployer {
+			repository(url: "http://nexus:8081/repository/maven-snapshots") {
+				authentication(userName: "admin", password: "admin123")
+			}
+		}
+	}
+}
+
+tasks['sonarqube'].dependsOn test
+
+scmVersion {
+	repository {
+		directory = project.rootProject.file('../')
+	}
+  
+  tag {
+    prefix = ''
+  }
+
+	
+  versionCreator 'versionWithBranch'
+}
+
+
+project.version = scmVersion.version

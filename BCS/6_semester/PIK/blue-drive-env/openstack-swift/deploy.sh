@@ -1,0 +1,1 @@
+docker run -d -p 8096:8080 --name openstack-swift -v /docker_volumes/openstack-swift:/swift/nodes/1/node/sdb1 -t dockerswiftaio/docker-swift

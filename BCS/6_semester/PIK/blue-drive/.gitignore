@@ -1,0 +1,9 @@
+**/.idea/**
+gradle
+.gradle
+build
+gradlew
+gradlew.bat
+backend@tmp
+*.log
+**/log/**
