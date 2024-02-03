@@ -1,0 +1,11 @@
+build
+.vs
+cmake-build*
+.idea
+CMakeSettings.json
+out
+.vscode
+bin
+*.log
+.gdb_history
+**docs**
