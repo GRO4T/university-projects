@@ -1,0 +1,9 @@
+.venv
+.windows-venv
+*.log
+*.gif
+*.pyc
+gifs/*
+logs/*
+graphs/*
+.archive

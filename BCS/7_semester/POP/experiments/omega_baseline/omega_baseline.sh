@@ -1,0 +1,36 @@
+#!/bin/bash
+
+TEST_NAME="omega_baseline"
+echo "[TEST] $TEST_NAME"
+
+rm ./experiments/$TEST_NAME/*.log
+rm ./experiments/$TEST_NAME/*.gif
+rm ./experiments/$TEST_NAME/*.png
+
+python3 particle_swarm_runner.py --particles 20 --obj_func schwefel --limit 500 \
+								 --stop_cond max_iteration --max_iteration 200 \
+								 --test --tests 20 --omega_policy basic --omega 1
+
+python3 particle_swarm_runner.py --particles 20 --obj_func schwefel --limit 500 \
+								 --stop_cond max_iteration --max_iteration 200 \
+								 --test --tests 20 --omega_policy basic --omega 0.8
+
+python3 particle_swarm_runner.py --particles 20 --obj_func schwefel --limit 500 \
+								 --stop_cond max_iteration --max_iteration 200 \
+								 --test --tests 20 --omega_policy basic --omega 0.6
+
+python3 particle_swarm_runner.py --particles 20 --obj_func schwefel --limit 500 \
+								 --stop_cond max_iteration --max_iteration 200 \
+								 --test --tests 20 --omega_policy basic --omega 0.4
+
+python3 particle_swarm_runner.py --particles 20 --obj_func schwefel --limit 500 \
+								 --stop_cond max_iteration --max_iteration 200 \
+								 --test --tests 20 --omega_policy basic --omega 0.2
+
+python3 particle_swarm_runner.py --particles 20 --obj_func schwefel --limit 500 \
+								 --stop_cond max_iteration --max_iteration 200 \
+								 --test --tests 20 --omega_policy basic --omega 0.0
+
+mv logs/* 	./experiments/$TEST_NAME/
+mv gifs/*	./experiments/$TEST_NAME/
+mv graphs/* ./experiments/$TEST_NAME/
