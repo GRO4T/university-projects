@@ -1,0 +1,166 @@
+## ams_version=1.0
+
+Model Main_coal_distribution {
+	Constraint maksymalna_liczba_wagonow {
+		IndexDomain: l;
+		Definition: v(l) <= 33;
+	}
+	Constraint maksymalna_ladownosc {
+		IndexDomain: l;
+		Definition: u(l) <= 20 * v(l);
+	}
+	Constraint pociag_moze_poruszac_sie_jedna_trasa_jednoczesnie1 {
+		IndexDomain: l;
+		Definition: sum((i,j), x(i,j,l)) <= 1;
+	}
+	Constraint pociag_moze_poruszac_sie_jedna_trasa_jednoczesnie2 {
+		IndexDomain: l;
+		Definition: sum((j,k), y(j,k,l)) <= 1;
+	}
+	Constraint prawo_kirhoffa {
+		IndexDomain: j;
+		Definition: sum((i,l), x(i,j,l)) = sum((k,l), y(j,k,l));
+	}
+	Constraint minimalne_zapotrzebowanie_elektrowni {
+		IndexDomain: k;
+		Definition: sum((j,l), u(l)*y(j,k,l)) >= n(k);
+	}
+	MathematicalProgram find_min_koszt_calosciowy {
+		Objective: koszt_calosciowy;
+		Direction: minimize;
+		Constraints: AllConstraints;
+		Variables: AllVariables;
+		Type: Automatic;
+	}
+	Variable koszt_calosciowy {
+		Range: free;
+		Definition: koszt_wydobycia;
+	}
+	Variable koszt_wydobycia {
+		Range: free;
+		Definition: sum((i,j,l), c(i)*u(l)*x(i,j,l));
+	}
+	Variable v {
+		IndexDomain: l;
+		Text: "liczba wagonów w pociągu l";
+		Range: integer;
+	}
+	Variable u {
+		IndexDomain: l;
+		Text: "ładunek transportowany przez pociąg l [ton]";
+		Range: nonnegative;
+	}
+	Variable x {
+		IndexDomain: (i,j,l);
+		Text: "zmienna binarna określająca czy pociąg k przejechał trasę od węzła kolejowego i do elektrowni j";
+		Range: binary;
+	}
+	Variable y {
+		IndexDomain: (j,k,l);
+		Text: "zmienna binarna określająca czy pociąg l przejechał trasę od węzła kolejowego j do elektrowni k";
+		Range: binary;
+	}
+	Parameter d {
+		IndexDomain: j;
+		Text: "maksymalna przepustowość węzła i [liczba pociągów]";
+		Range: integer;
+		Property: Constant;
+		InitialData: data {W1: 47, W2: 40};
+	}
+	Parameter h {
+		IndexDomain: (j,k);
+		Text: "długość trasy od węzła kolejowego i do elektrowni j [km]";
+		Range: nonnegative;
+		Property: Constant;
+	}
+	Parameter g {
+		IndexDomain: (i,j);
+		Text: "długość trasy od kopalni i do węzła kolejowego j [km]";
+		Range: nonnegative;
+		Property: Constant;
+	}
+	Parameter b {
+		IndexDomain: (j,k);
+		Text: "maksymalna przepustowość odcinka od węzła kolejowego i do elektrowni j [liczba pociągów]";
+		Range: integer;
+		Property: Constant;
+	}
+	Parameter a {
+		IndexDomain: (i,j);
+		Text: "maksymalna przepustowość odcinka od kopalni i do węzła kolejowego j [liczba pociągów]";
+		Range: integer;
+		Property: Constant;
+	}
+	Parameter n {
+		IndexDomain: k;
+		Text: "minimalne dzienne zapotrzebowanie węgla w elektrowni k [ton]";
+		Property: Constant;
+		InitialData: data {E1: 19676, E2: 15623};
+	}
+	Parameter e {
+		IndexDomain: i;
+		Text: "maksymalne dzienne zdolności wydobywcze kopalni i [ton]";
+		Property: Constant;
+		InitialData: data {K1: 20019, K2: 19616};
+	}
+	Parameter c {
+		IndexDomain: i;
+		Text: "koszt wydobycia 1 tony węgla w kopalni i [zł]";
+		Range: nonnegative;
+		Property: Constant;
+		InitialData: data {K1 : 540, K2 : 503};
+	}
+	Set kopalnie {
+		Index: i;
+		Definition: data {K1, K2};
+	}
+	Set elektrownie {
+		Index: k;
+		Definition: data {E1, E2};
+	}
+	Set wezly_kolejowe {
+		Index: j;
+		Definition: data {W1, W2};
+	}
+	Set pociagi {
+		Index: l;
+		Definition: {
+			ElementRange(1, 82);
+		}
+	}
+	Procedure MainInitialization {
+		Comment: "Add initialization statements here that do NOT require any library being initialized already.";
+	}
+	Procedure PostMainInitialization {
+		Comment: {
+			"Add initialization statements here that require that the libraries are already initialized properly,
+			or add statements that require the Data Management module to be initialized."
+		}
+	}
+	Procedure MainExecution {
+		Body: {
+			solve find_min_koszt_calosciowy;
+		}
+	}
+	Procedure PreMainTermination {
+		Body: {
+			return DataManagementExit();
+		}
+		Comment: {
+			"Add termination statements here that require all libraries to be still alive.
+			Return 1 if you allow the termination sequence to continue.
+			Return 0 if you want to cancel the termination sequence."
+		}
+	}
+	Procedure MainTermination {
+		Body: {
+			return 1;
+		}
+		Comment: {
+			"Add termination statements here that do not require all libraries to be still alive.
+			Return 1 to allow the termination sequence to continue.
+			Return 0 if you want to cancel the termination sequence.
+			It is recommended to only use the procedure PreMainTermination to cancel the termination sequence and let this procedure always return 1."
+		}
+	}
+}
