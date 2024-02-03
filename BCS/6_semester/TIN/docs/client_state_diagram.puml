@@ -1,0 +1,27 @@
+@startuml
+scale 600 width
+
+[*] --> Any
+Any --> ReceivingFile : Received header
+state ReceivingFile {
+  [*] -> StartReceiving
+
+
+  state c <<choice>>
+  
+  StartReceiving --> WaitingForChunk
+
+  WaitingForChunk --> ReceivedFileChunk : File chunk
+
+  ReceivedFileChunk --> c
+
+  c --> WaitingForChunk : [Checksum matches]
+  c --> SendNAK : [otherwise]
+  SendNAK --> WaitingForRejectedChunk
+
+  WaitingForRejectedChunk --> SendNAK : Timeout
+  WaitingForRejectedChunk --> ReceivedFileChunk : File chunk
+
+}
+WaitingForChunk --> [*] : Last chunk
+@enduml

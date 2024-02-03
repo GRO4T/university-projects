@@ -1,0 +1,20 @@
+@startuml
+scale 600 width
+
+[*] --> Init
+Init : File needs to be sent
+Init --> SendHeader
+
+Any --> NakReceived : NAK
+NakReceived --> LastState
+Any --> ResendPackets : [ResendTimer = 0] 
+ResendPackets --> LastState
+
+note left of NakReceived : zapisujemy jakiego pliku dotyczy
+note left of ResendPackets : w zależności od\nliczby decydujemy czy wysylać\nunicastowo czy multicastowo
+
+SendHeader --> SendChunk
+
+SendChunk --> SendChunk : [Chunk left]
+SendChunk --> [*] : [Last chunk]
+@enduml

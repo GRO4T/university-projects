@@ -1,0 +1,8 @@
+file=./media/img.png
+expire=2021.05.15 19:30
+weekday=[1][2][3]
+hour=[05:30-08:30][15:00-19:00]
+---
+file=./media/hello.mkv
+expire=2021.06.30 00:00
+
