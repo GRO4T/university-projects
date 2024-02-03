@@ -1,0 +1,8 @@
+n_agents=7 steps=1000 
+5.43 okrążeń, 84 prob, 0.06 okrażeń na 1 probe
+
+n_agents=1 steps=1000
+1.43 okrążeń, 8 prób, 0.18 okrażeń na 1 próbę
+
+n_agents=14 steps=1000
+13.57 okrążeń, 138 prób, 0.10 okrążeń na 1 próbę
