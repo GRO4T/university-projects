@@ -1,0 +1,19 @@
+﻿<Application x:Class="CarsWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:CarsWPF"
+             xmlns:t="clr-namespace:CarsWPF.ViewModels"
+             xmlns:k="clr-namespace:CarsWPF.Views">
+    <Application.Resources>
+        <ResourceDictionary>
+            <DataTemplate DataType="{x:Type t:CarsViewModel}">
+                <k:CarsView/>
+            </DataTemplate>
+            <DataTemplate DataType="{x:Type t:CarViewModel}">
+                <k:CarView/>
+            </DataTemplate>
+            <!-- Dummy Style, anything you won't use goes -->
+            <Style TargetType="{x:Type Rectangle}" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
