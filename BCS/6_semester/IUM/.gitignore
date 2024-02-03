@@ -1,0 +1,10 @@
+.idea
+.ipynb_checkpoints
+
+ium-venv
+.venv
+
+__pycache__
+
+backend/output/*
+!backend/output/.gitkeep
