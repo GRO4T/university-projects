@@ -1,0 +1,44 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Run Ketje",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/Ketje",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "Build Ketje"
+        },
+        {
+            "name": "Test Ketje",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/build/KetjeTest",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "Build Ketje"
+        },
+        {
+            "name": "Run extern/Ketje/ketje_driver",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/extern/Ketje/ketje_driver",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "MIMode": "lldb",
+            "preLaunchTask": "Build extern/Ketje/ketje_driver"
+        }
+    ]
+}
